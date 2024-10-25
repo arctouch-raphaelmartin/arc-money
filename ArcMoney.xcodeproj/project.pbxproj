@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,10 @@
 		BE13CA262CC698400015BB46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE13CA292CC698400015BB46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8418B4872CCC10BA003947F5 /* Utils */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Utils; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BE13CA1C2CC6983E0015BB46 /* Frameworks */ = {
@@ -51,6 +55,7 @@
 		BE13CA212CC6983E0015BB46 /* ArcMoney */ = {
 			isa = PBXGroup;
 			children = (
+				8418B4872CCC10BA003947F5 /* Utils */,
 				BE13CA222CC6983E0015BB46 /* ArcMoneyApp.swift */,
 				BE13CA242CC6983E0015BB46 /* ContentView.swift */,
 				BE13CA262CC698400015BB46 /* Assets.xcassets */,
@@ -81,6 +86,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8418B4872CCC10BA003947F5 /* Utils */,
 			);
 			name = ArcMoney;
 			productName = ArcMoney;
