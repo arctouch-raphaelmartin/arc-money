@@ -5,7 +5,14 @@
 //  Created by Matheus Vaccaro on 10/28/24.
 //
 
+import SwiftUI
+
+// MARK: - ArcMoneyIcon
+
 enum ArcMoneyIcon: String {
+    
+    // MARK: Cases
+    
     case shopping = "cart.fill"
     case food = "fork-knife"
     case entertainment = "popcorn.fill"
@@ -21,4 +28,10 @@ enum ArcMoneyIcon: String {
     case settingsUnselected = "gearshape"
     case settingsSelected = "gearshape.fill"
     case dropdownArrow = "chevron.down"
+    
+    // MARK: Internal Properties
+    
+    var image: Image {
+        Image(systemName: self.rawValue)
+    }
 }
