@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum ArcMoneyColors {
+enum ArcMoneyColor {
     static let backdrop = Color("Backdrop")
     static let dark = Color("Dark")
     static let gray = Color("Gray")
