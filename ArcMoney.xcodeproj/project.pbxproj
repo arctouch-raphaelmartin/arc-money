@@ -40,14 +40,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		846B73492CEF62F1002C9CED /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				84FE89502CD11BC00041D2ED /* Colors.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		BE13CA162CC6983E0015BB46 = {
 			isa = PBXGroup;
 			children = (
@@ -67,7 +59,6 @@
 		BE13CA212CC6983E0015BB46 /* ArcMoney */ = {
 			isa = PBXGroup;
 			children = (
-				846B73492CEF62F1002C9CED /* Utils */,
 				C226B58D2CD275E900F4BA44 /* Utils */,
 				C27F64632CCFEB2200F75606 /* Design System */,
 				BE13CA222CC6983E0015BB46 /* ArcMoneyApp.swift */,
