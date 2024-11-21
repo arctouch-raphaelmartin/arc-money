@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84FE89512CD11BC00041D2ED /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE89502CD11BC00041D2ED /* Colors.swift */; };
 		BE13CA232CC6983E0015BB46 /* ArcMoneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE13CA222CC6983E0015BB46 /* ArcMoneyApp.swift */; };
 		BE13CA252CC6983E0015BB46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE13CA242CC6983E0015BB46 /* ContentView.swift */; };
 		BE13CA272CC698400015BB46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE13CA262CC698400015BB46 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84FE89502CD11BC00041D2ED /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BE13CA1F2CC6983E0015BB46 /* ArcMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE13CA222CC6983E0015BB46 /* ArcMoneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneyApp.swift; sourceTree = "<group>"; };
 		BE13CA242CC6983E0015BB46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		846B73492CEF62F1002C9CED /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				84FE89502CD11BC00041D2ED /* Colors.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		BE13CA162CC6983E0015BB46 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +61,7 @@
 		BE13CA212CC6983E0015BB46 /* ArcMoney */ = {
 			isa = PBXGroup;
 			children = (
+				846B73492CEF62F1002C9CED /* Utils */,
 				BE13CA222CC6983E0015BB46 /* ArcMoneyApp.swift */,
 				BE13CA242CC6983E0015BB46 /* ContentView.swift */,
 				BE13CA262CC698400015BB46 /* Assets.xcassets */,
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE13CA252CC6983E0015BB46 /* ContentView.swift in Sources */,
+				84FE89512CD11BC00041D2ED /* Colors.swift in Sources */,
 				BE13CA232CC6983E0015BB46 /* ArcMoneyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
