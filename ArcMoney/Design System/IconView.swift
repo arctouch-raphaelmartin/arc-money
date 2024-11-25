@@ -44,17 +44,32 @@ struct IconView: View {
     VStack {
         HStack {
             Text("Small Icon:")
+            
             IconView(icon: .salary, size: .small)
+            IconView(icon: .salary, size: .small, color: .light)
+            IconView(icon: .salary, size: .small, color: .dark)
+            IconView(icon: .salary, size: .small, color: .primary)
+            IconView(icon: .salary, size: .small, color: .secondary)
         }
         
         HStack {
             Text("Medium Icon:")
+            
             IconView(icon: .salary, size: .medium)
+            IconView(icon: .salary, size: .medium, color: .light)
+            IconView(icon: .salary, size: .medium, color: .dark)
+            IconView(icon: .salary, size: .medium, color: .primary)
+            IconView(icon: .salary, size: .medium, color: .secondary)
         }
         
         HStack {
             Text("Large Icon:")
+            
             IconView(icon: .salary, size: .large)
+            IconView(icon: .salary, size: .large, color: .light)
+            IconView(icon: .salary, size: .large, color: .dark)
+            IconView(icon: .salary, size: .large, color: .primary)
+            IconView(icon: .salary, size: .large, color: .secondary)
         }
     }
 }
