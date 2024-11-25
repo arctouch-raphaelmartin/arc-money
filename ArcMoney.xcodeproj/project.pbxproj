@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		844315FB2CF4B4DB0073B708 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844315FA2CF4B4D30073B708 /* Labels.swift */; };
+		844315FE2CF4B5BD0073B708 /* ReadexPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 844315FC2CF4B5BD0073B708 /* ReadexPro-Medium.ttf */; };
+		844315FF2CF4B5BD0073B708 /* ReadexPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 844315FD2CF4B5BD0073B708 /* ReadexPro-Regular.ttf */; };
 		84FE89512CD11BC00041D2ED /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FE89502CD11BC00041D2ED /* Colors.swift */; };
 		BE13CA232CC6983E0015BB46 /* ArcMoneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE13CA222CC6983E0015BB46 /* ArcMoneyApp.swift */; };
 		BE13CA252CC6983E0015BB46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE13CA242CC6983E0015BB46 /* ContentView.swift */; };
@@ -15,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		844315FA2CF4B4D30073B708 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		844315FC2CF4B5BD0073B708 /* ReadexPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ReadexPro-Medium.ttf"; sourceTree = "<group>"; };
+		844315FD2CF4B5BD0073B708 /* ReadexPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ReadexPro-Regular.ttf"; sourceTree = "<group>"; };
+		844316012CF4B8290073B708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		84FE89502CD11BC00041D2ED /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BE13CA1F2CC6983E0015BB46 /* ArcMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE13CA222CC6983E0015BB46 /* ArcMoneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneyApp.swift; sourceTree = "<group>"; };
@@ -34,6 +41,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		844315F92CF4B4A90073B708 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				844315FA2CF4B4D30073B708 /* Labels.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		844316002CF4B5C40073B708 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				844315FC2CF4B5BD0073B708 /* ReadexPro-Medium.ttf */,
+				844315FD2CF4B5BD0073B708 /* ReadexPro-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		846B73492CEF62F1002C9CED /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -61,10 +85,13 @@
 		BE13CA212CC6983E0015BB46 /* ArcMoney */ = {
 			isa = PBXGroup;
 			children = (
+				844316012CF4B8290073B708 /* Info.plist */,
+				844315F92CF4B4A90073B708 /* Components */,
 				846B73492CEF62F1002C9CED /* Utils */,
 				BE13CA222CC6983E0015BB46 /* ArcMoneyApp.swift */,
 				BE13CA242CC6983E0015BB46 /* ContentView.swift */,
 				BE13CA262CC698400015BB46 /* Assets.xcassets */,
+				844316002CF4B5C40073B708 /* Font */,
 				BE13CA282CC698400015BB46 /* Preview Content */,
 			);
 			path = ArcMoney;
@@ -138,6 +165,8 @@
 			files = (
 				BE13CA2A2CC698400015BB46 /* Preview Assets.xcassets in Resources */,
 				BE13CA272CC698400015BB46 /* Assets.xcassets in Resources */,
+				844315FE2CF4B5BD0073B708 /* ReadexPro-Medium.ttf in Resources */,
+				844315FF2CF4B5BD0073B708 /* ReadexPro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +179,7 @@
 			files = (
 				BE13CA252CC6983E0015BB46 /* ContentView.swift in Sources */,
 				84FE89512CD11BC00041D2ED /* Colors.swift in Sources */,
+				844315FB2CF4B4DB0073B708 /* Labels.swift in Sources */,
 				BE13CA232CC6983E0015BB46 /* ArcMoneyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +316,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ArcMoney/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArcMoney/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -314,6 +345,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ArcMoney/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArcMoney/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
