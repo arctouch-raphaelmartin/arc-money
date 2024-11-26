@@ -7,10 +7,28 @@
 
 import SwiftUI
 
-// MARK: View Extensions
+// MARK: - View Extensions
 
 extension View {
+    
+    // MARK: Padding
+    
     func padding(_ spacing: ArcMoneySpacing) -> some View {
         padding(spacing.rawValue)
+    }
+    
+    // MARK: Corner Radius
+    
+    @ViewBuilder
+    func cornerRadius(_ radius: ArcMoneyCornerRadius) -> some View {
+        switch radius {
+        case .none, .quarter, .half, .threeQuarters, .one, .oneAndQuarter, .oneAndHalf, .oneAndThreeQuarters, .two,
+                .three, .four:
+            cornerRadius(radius.value)
+        case .fullCircle:
+            clipShape(Circle())
+        case .fullCapsule:
+            clipShape(Capsule())
+        }
     }
 }
