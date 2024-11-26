@@ -6,6 +6,18 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BE13CA232CC6983E0015BB46 /* ArcMoneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE13CA222CC6983E0015BB46 /* ArcMoneyApp.swift */; };
+		BE13CA252CC6983E0015BB46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE13CA242CC6983E0015BB46 /* ContentView.swift */; };
+		BE13CA272CC698400015BB46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE13CA262CC698400015BB46 /* Assets.xcassets */; };
+		BE13CA2A2CC698400015BB46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE13CA292CC698400015BB46 /* Preview Assets.xcassets */; };
+		C226B58E2CD275E900F4BA44 /* ArcMoneyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226B58B2CD275E900F4BA44 /* ArcMoneyIcon.swift */; };
+		C226B58F2CD275E900F4BA44 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226B58C2CD275E900F4BA44 /* Colors.swift */; };
+		C226B5912CD27F1100F4BA44 /* ArcMoneySize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226B5902CD27F1100F4BA44 /* ArcMoneySize.swift */; };
+		C27F64652CCFEB3A00F75606 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27F64642CCFEB3A00F75606 /* IconView.swift */; };
+		C2E02ADD2CF57516005F8AB6 /* ArcMoneySpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E02ADC2CF57514005F8AB6 /* ArcMoneySpacing.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		844315FA2CF4B4D30073B708 /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		844315FC2CF4B5BD0073B708 /* ReadexPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ReadexPro-Medium.ttf"; sourceTree = "<group>"; };
@@ -21,6 +33,7 @@
 		C226B58C2CD275E900F4BA44 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C226B5902CD27F1100F4BA44 /* ArcMoneySize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneySize.swift; sourceTree = "<group>"; };
 		C27F64642CCFEB3A00F75606 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		C2E02ADC2CF57514005F8AB6 /* ArcMoneySpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneySpacing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +114,9 @@
 		C226B58D2CD275E900F4BA44 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C226B5902CD27F1100F4BA44 /* ArcMoneySize.swift */,
 				C226B58B2CD275E900F4BA44 /* ArcMoneyIcon.swift */,
+				C226B5902CD27F1100F4BA44 /* ArcMoneySize.swift */,
+				C2E02ADC2CF57514005F8AB6 /* ArcMoneySpacing.swift */,
 				C226B58C2CD275E900F4BA44 /* Colors.swift */,
 			);
 			path = Utils;
@@ -196,6 +210,7 @@
 				84FE89512CD11BC00041D2ED /* Colors.swift in Sources */,
 				844315FB2CF4B4DB0073B708 /* Labels.swift in Sources */,
 				BE13CA232CC6983E0015BB46 /* ArcMoneyApp.swift in Sources */,
+				C2E02ADD2CF57516005F8AB6 /* ArcMoneySpacing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
