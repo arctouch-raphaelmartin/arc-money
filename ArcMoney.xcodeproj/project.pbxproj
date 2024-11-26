@@ -15,6 +15,7 @@
 		C226B58F2CD275E900F4BA44 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226B58C2CD275E900F4BA44 /* Colors.swift */; };
 		C226B5912CD27F1100F4BA44 /* ArcMoneySize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226B5902CD27F1100F4BA44 /* ArcMoneySize.swift */; };
 		C27F64652CCFEB3A00F75606 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27F64642CCFEB3A00F75606 /* IconView.swift */; };
+		C2E02ADD2CF57516005F8AB6 /* ArcMoneySpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E02ADC2CF57514005F8AB6 /* ArcMoneySpacing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C226B58C2CD275E900F4BA44 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C226B5902CD27F1100F4BA44 /* ArcMoneySize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneySize.swift; sourceTree = "<group>"; };
 		C27F64642CCFEB3A00F75606 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		C2E02ADC2CF57514005F8AB6 /* ArcMoneySpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneySpacing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +82,9 @@
 		C226B58D2CD275E900F4BA44 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C226B5902CD27F1100F4BA44 /* ArcMoneySize.swift */,
 				C226B58B2CD275E900F4BA44 /* ArcMoneyIcon.swift */,
+				C226B5902CD27F1100F4BA44 /* ArcMoneySize.swift */,
+				C2E02ADC2CF57514005F8AB6 /* ArcMoneySpacing.swift */,
 				C226B58C2CD275E900F4BA44 /* Colors.swift */,
 			);
 			path = Utils;
@@ -171,6 +174,7 @@
 				C27F64652CCFEB3A00F75606 /* IconView.swift in Sources */,
 				BE13CA252CC6983E0015BB46 /* ContentView.swift in Sources */,
 				BE13CA232CC6983E0015BB46 /* ArcMoneyApp.swift in Sources */,
+				C2E02ADD2CF57516005F8AB6 /* ArcMoneySpacing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
