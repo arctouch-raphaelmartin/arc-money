@@ -35,9 +35,9 @@ enum ArcMoneyCornerRadius {
     case three
     /// 64 pts of radius.
     case four
-    /// Full radius. Creates circle-like corner radii.
+    /// Full radius. Creates a circle-like corner radii.
     case fullCircle
-    /// Full radius. Creates capsule-like corner radii.
+    /// Full radius. Creates a capsule-like corner radii.
     case fullCapsule
     
     // MARK: Internal Properties
