@@ -98,10 +98,10 @@ struct BackgroundedIconView: View {
             Text("Larger Spacing & Corner Radius:")
             
             HStack {
-                BackgroundedIconView(icon: .salary, iconPadding: .two, cornerRadius: .fullCircle)
-                BackgroundedIconView(icon: .salary, iconPadding: .two, backgroundColor: .secondary, cornerRadius: .fullCircle)
-                BackgroundedIconView(icon: .salary, iconPadding: .two, backgroundColor: .gray, cornerRadius: .fullCircle)
-                BackgroundedIconView(icon: .salary, iconPadding: .two, backgroundColor: .dark, cornerRadius: .fullCircle)
+                BackgroundedIconView(icon: .salary, iconPadding: .oneAndHalf, cornerRadius: .fullCircle)
+                BackgroundedIconView(icon: .salary, iconPadding: .oneAndHalf, backgroundColor: .secondary, cornerRadius: .fullCircle)
+                BackgroundedIconView(icon: .salary, iconPadding: .oneAndHalf, backgroundColor: .gray, cornerRadius: .fullCircle)
+                BackgroundedIconView(icon: .salary, iconPadding: .oneAndHalf, backgroundColor: .dark, cornerRadius: .fullCircle)
             }
         }
     }
