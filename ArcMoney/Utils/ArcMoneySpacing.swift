@@ -17,8 +17,6 @@ enum ArcMoneySpacing: CGFloat {
     case quarter = 4
     /// 8 pts of spacing.
     case half = 8
-    /// 12 pts of spacing.
-    case threeQuarters = 12
     /// 16 pts of spacing.
     case one = 16
     /// 20 pts of spacing.
@@ -27,10 +25,6 @@ enum ArcMoneySpacing: CGFloat {
     case oneAndHalf = 24
     /// 28 pts of spacing.
     case oneAndThreeQuarters = 28
-    /// 32 pts of spacing.
-    case two = 32
-    /// 48 pts of spacing.
-    case three = 48
     /// 64 pts of spacing.
     case four = 64
 }
