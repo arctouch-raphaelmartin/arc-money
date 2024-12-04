@@ -9,65 +9,34 @@ import Foundation
 
 // MARK: - ArcMoneyCornerRadius
 
-enum ArcMoneyCornerRadius {
+enum ArcMoneyCornerRadius: CGFloat {
     
     // MARK: Cases
     
     /// 0 pts of radius.
-    case none
+    case none = 0
     /// 4 pts of radius.
-    case quarter
+    case quarter = 4
     /// 8 pts of radius.
-    case half
+    case half = 8
     /// 12 pts of radius.
-    case threeQuarters
+    case threeQuarters = 12
     /// 16 pts of radius.
-    case one
+    case one = 16
     /// 20 pts of radius.
-    case oneAndQuarter
+    case oneAndQuarter = 20
     /// 24 pts of radius.
-    case oneAndHalf
+    case oneAndHalf = 24
     /// 28 pts of radius.
-    case oneAndThreeQuarters
+    case oneAndThreeQuarters = 28
     /// 32 pts of radius.
-    case two
+    case two = 32
     /// 48 pts of radius.
-    case three
+    case three = 48
     /// 64 pts of radius.
-    case four
+    case four = 64
     /// Full radius. Creates a circle-like corner radii.
-    case fullCircle
+    case fullCircle = -1
     /// Full radius. Creates a capsule-like corner radii.
-    case fullCapsule
-    
-    // MARK: Internal Properties
-    
-    var value: CGFloat {
-        switch self {
-        case .none:
-            0
-        case .quarter:
-            4
-        case .half:
-            8
-        case .threeQuarters:
-            12
-        case .one:
-            16
-        case .oneAndQuarter:
-            20
-        case .oneAndHalf:
-            24
-        case .oneAndThreeQuarters:
-            28
-        case .two:
-            32
-        case .three:
-            48
-        case .four:
-            64
-        case .fullCircle, .fullCapsule:
-            CGFloat.infinity
-        }
-    }
+    case fullCapsule = -2
 }
