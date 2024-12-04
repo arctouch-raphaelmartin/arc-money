@@ -22,8 +22,7 @@ extension View {
     @ViewBuilder
     func cornerRadius(_ radius: ArcMoneyCornerRadius) -> some View {
         switch radius {
-        case .none, .quarter, .half, .threeQuarters, .one, .oneAndQuarter, .oneAndHalf, .oneAndThreeQuarters, .two,
-                .three, .four:
+        case .none, .quarter, .one, .oneAndQuarter, .two:
             clipShape(RoundedRectangle(cornerRadius: radius.rawValue))
         case .fullCircle:
             clipShape(Circle())
