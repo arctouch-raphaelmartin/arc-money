@@ -24,7 +24,7 @@ extension View {
         switch radius {
         case .none, .quarter, .half, .threeQuarters, .one, .oneAndQuarter, .oneAndHalf, .oneAndThreeQuarters, .two,
                 .three, .four:
-            cornerRadius(radius.rawValue)
+            clipShape(RoundedRectangle(cornerRadius: radius.rawValue))
         case .fullCircle:
             clipShape(Circle())
         case .fullCapsule:
