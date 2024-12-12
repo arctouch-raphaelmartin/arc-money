@@ -1,10 +1,3 @@
-//
-//  ArcMoneyCornerRadius.swift
-//  ArcMoney
-//
-//  Created by Matheus Vaccaro on 11/26/24.
-//
-
 import Foundation
 
 // MARK: - ArcMoneyCornerRadius

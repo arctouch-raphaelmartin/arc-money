@@ -1,10 +1,3 @@
-//
-//  IconView.swift
-//  ArcMoney
-//
-//  Created by Matheus Vaccaro on 10/28/24.
-//
-
 import SwiftUI
 
 // MARK: - IconView
