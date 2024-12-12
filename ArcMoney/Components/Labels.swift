@@ -37,7 +37,7 @@ struct FontStyle: ViewModifier {
 }
 
 extension View {
-    func customStyle(_ style: TextStyle) -> some View {
+    func textStyle(_ style: TextStyle) -> some View {
         self.modifier(FontStyle(style: style))
     }
 }
@@ -45,18 +45,18 @@ extension View {
 #Preview {
     VStack {
         Text("This is H1")
-            .customStyle(.h1)
+            .textStyle(.h1)
         Spacer()
         Text("This is H2")
-            .customStyle(.h2)
+            .textStyle(.h2)
         Spacer()
         Text("This is SectionTitle")
-            .customStyle(.sectionTitle)
+            .textStyle(.sectionTitle)
         Spacer()
         Text("This is SectionSubtitle")
-            .customStyle(.sectionSubtitle)
+            .textStyle(.sectionSubtitle)
         Spacer()
         Text("This is Small")
-            .customStyle(.small)
+            .textStyle(.small)
     }.padding(.vertical, 100)
 }
