@@ -7,7 +7,7 @@ enum ArcMoneyIcon: String {
     // MARK: Cases
     
     case shopping = "cart.fill"
-    case food = "fork-knife"
+    case food = "fork.knife"
     case entertainment = "popcorn.fill"
     case transportation = "bus"
     case education = "graduationcap.fill"
