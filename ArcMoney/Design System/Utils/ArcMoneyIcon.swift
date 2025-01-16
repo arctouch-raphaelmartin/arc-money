@@ -21,6 +21,7 @@ enum ArcMoneyIcon: String {
     case settingsUnselected = "gearshape"
     case settingsSelected = "gearshape.fill"
     case dropdownArrow = "chevron.down"
+    case checkmark = "checkmark.circle.fill"
     
     // MARK: Internal Properties
     
