@@ -7,23 +7,27 @@ struct DropdownView: View {
     // MARK: Internal Properties
 
     @Binding var selection: DropdownData?
-    var options: [DropdownData]
     
+    var options: [DropdownData]
     var dropdownDirection: DropdownDirection = .top
     
     // MARK: Private Properties
     
+    private let maxOptionsHeight: CGFloat
+    private let backgroundColor: Color
+    private let unselectedOption: DropdownData
+    
     @State private var showDropdown = false
     
-    private let backgroundColor: Color = .white
-
-    private let unselectedOption: DropdownData
-        
     // zIndexes are being handled to support multiple DropdownViews being presented in the same View.
     // Without this, multiple menus will overlap themselves if they're opened at the same time.
     // These indexes ensure that the last menu that was opened always stays on top.
     @SceneStorage("drop_down_zindex") private var index = 1000.0
     @State private var zIndex = 1000.0
+    
+    private static let defaultUnselectedOption: DropdownData = .init(
+        icon: .settingsUnselected,
+        title: "Select")
     
     // MARK: Lifecycle
     
@@ -31,11 +35,15 @@ struct DropdownView: View {
         selection: Binding<DropdownData?>,
         options: [DropdownData],
         dropdownDirection: DropdownDirection = .top,
+        maxOptionsHeight: CGFloat = 200,
+        backgroundColor: Color = .white,
         unselectedOption: DropdownData = defaultUnselectedOption)
     {
         self._selection = selection
         self.options = options
         self.dropdownDirection = dropdownDirection
+        self.maxOptionsHeight = maxOptionsHeight
+        self.backgroundColor = backgroundColor
         self.unselectedOption = unselectedOption
     }
     
@@ -115,17 +123,6 @@ struct DropdownView: View {
     }
 }
 
-// MARK: - Default UnselectedOption
-
-extension DropdownView {
-    
-    // MARK: Private Properties
-    
-    private static let defaultUnselectedOption: DropdownData = .init(
-        icon: .settingsUnselected,
-        title: "Select")
-}
-
 // MARK: - Preview
 
 #Preview {
@@ -144,6 +141,13 @@ extension DropdownView {
                 selection: $selection,
                 options: options,
                 dropdownDirection: .bottom)
+            .padding(.oneAndThreeQuarters)
+            .background(.gray)
+            
+            DropdownView(
+                selection: $selection,
+                options: options,
+                dropdownDirection: .top)
             .padding(.oneAndThreeQuarters)
             .background(.gray)
         }
