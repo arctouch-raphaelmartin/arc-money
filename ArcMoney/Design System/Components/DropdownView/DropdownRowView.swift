@@ -110,6 +110,7 @@ struct DropdownRowView<TrailingContent: View>: View {
                 Text(title)
                     .textStyle(.h2)
             }
+            .animation(.none, value: UUID()) // Workaround to continue using the deprecated `.animation(.none)` behavior.
             
             Spacer()
             
