@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		849FE2352D26C8E700411789 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FE2342D26C8E300411789 /* Button.swift */; };
+		849FE2352D26C8E700411789 /* ArcButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FE2342D26C8E300411789 /* ArcButton.swift */; };
 		BE13CA232CC6983E0015BB46 /* ArcMoneyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE13CA222CC6983E0015BB46 /* ArcMoneyApp.swift */; };
 		BE13CA252CC6983E0015BB46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE13CA242CC6983E0015BB46 /* ContentView.swift */; };
 		BE13CA272CC698400015BB46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE13CA262CC698400015BB46 /* Assets.xcassets */; };
@@ -30,7 +30,7 @@
 		844315FC2CF4B5BD0073B708 /* ReadexPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ReadexPro-Medium.ttf"; sourceTree = "<group>"; };
 		844315FD2CF4B5BD0073B708 /* ReadexPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ReadexPro-Regular.ttf"; sourceTree = "<group>"; };
 		844316012CF4B8290073B708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		849FE2342D26C8E300411789 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		849FE2342D26C8E300411789 /* ArcButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcButton.swift; sourceTree = "<group>"; };
 		BE13CA1F2CC6983E0015BB46 /* ArcMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE13CA222CC6983E0015BB46 /* ArcMoneyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneyApp.swift; sourceTree = "<group>"; };
 		BE13CA242CC6983E0015BB46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		844315F92CF4B4A90073B708 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				849FE2342D26C8E300411789 /* Button.swift */,
+				849FE2342D26C8E300411789 /* ArcButton.swift */,
 				C2E02ADE2CF575B8005F8AB6 /* BackgroundedIconView.swift */,
 				C27F64642CCFEB3A00F75606 /* IconView.swift */,
 				844315FA2CF4B4D30073B708 /* Labels.swift */,
@@ -232,7 +232,7 @@
 				C226B58F2CD275E900F4BA44 /* Colors.swift in Sources */,
 				C27F64652CCFEB3A00F75606 /* IconView.swift in Sources */,
 				BE13CA252CC6983E0015BB46 /* ContentView.swift in Sources */,
-				849FE2352D26C8E700411789 /* Button.swift in Sources */,
+				849FE2352D26C8E700411789 /* ArcButton.swift in Sources */,
 				BE13CA232CC6983E0015BB46 /* ArcMoneyApp.swift in Sources */,
 				C2E02AE42CF57A5F005F8AB6 /* ArcMoneyCornerRadius.swift in Sources */,
 				C2E02ADD2CF57516005F8AB6 /* ArcMoneySpacing.swift in Sources */,
