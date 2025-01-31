@@ -64,13 +64,7 @@ struct DropdownView: View {
                     }
                 }
             }
-            .overlay(GeometryReader { geometryProxy in
-                Color.clear.onAppear {
-                    withAnimation(.smooth) {
-                        scrollViewContentSize = geometryProxy.size
-                    }
-                }
-            })
+            .observeSizeChange($scrollViewContentSize, updateWithAnimation: .smooth)
         }
         .frame(height: min(scrollViewContentSize.height, maxOptionsHeight))
         .background(backgroundColor)
