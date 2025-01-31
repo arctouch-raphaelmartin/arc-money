@@ -127,6 +127,7 @@ struct DropdownRowView<TrailingContent: View>: View {
         }
         .padding(.half)
         .background(backgroundColor)
+        .contentShape(Rectangle())
         .cornerRadius(cornerRadius)
     }
 }
