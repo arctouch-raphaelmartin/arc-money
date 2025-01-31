@@ -20,6 +20,8 @@
 		C25F53732D0B39BD00FB7E86 /* ReadexPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 844315FC2CF4B5BD0073B708 /* ReadexPro-Medium.ttf */; };
 		C25F53742D0B39C100FB7E86 /* ReadexPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 844315FD2CF4B5BD0073B708 /* ReadexPro-Regular.ttf */; };
 		C27F64652CCFEB3A00F75606 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27F64642CCFEB3A00F75606 /* IconView.swift */; };
+		C29F60EA2D4D7A2B00DE31B9 /* SizeChangeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F60E92D4D7A2100DE31B9 /* SizeChangeObserver.swift */; };
+		C29F60EC2D4D7A3400DE31B9 /* View+observeSizeChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F60EB2D4D7A2F00DE31B9 /* View+observeSizeChange.swift */; };
 		C2E02ADD2CF57516005F8AB6 /* ArcMoneySpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E02ADC2CF57514005F8AB6 /* ArcMoneySpacing.swift */; };
 		C2E02ADF2CF575B8005F8AB6 /* BackgroundedIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E02ADE2CF575B8005F8AB6 /* BackgroundedIconView.swift */; };
 		C2E02AE22CF57816005F8AB6 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E02AE12CF57812005F8AB6 /* View+Extensions.swift */; };
@@ -45,6 +47,8 @@
 		C226B58C2CD275E900F4BA44 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C226B5902CD27F1100F4BA44 /* ArcMoneySize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneySize.swift; sourceTree = "<group>"; };
 		C27F64642CCFEB3A00F75606 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		C29F60E92D4D7A2100DE31B9 /* SizeChangeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeChangeObserver.swift; sourceTree = "<group>"; };
+		C29F60EB2D4D7A2F00DE31B9 /* View+observeSizeChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+observeSizeChange.swift"; sourceTree = "<group>"; };
 		C2E02ADC2CF57514005F8AB6 /* ArcMoneySpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneySpacing.swift; sourceTree = "<group>"; };
 		C2E02ADE2CF575B8005F8AB6 /* BackgroundedIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundedIconView.swift; sourceTree = "<group>"; };
 		C2E02AE12CF57812005F8AB6 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				BE13CA242CC6983E0015BB46 /* ContentView.swift */,
 				C27F64632CCFEB2200F75606 /* Design System */,
 				C2E02AE02CF577D0005F8AB6 /* Extensions */,
+				C29F60E72D4D7A0500DE31B9 /* View Modifiers */,
 				BE13CA282CC698400015BB46 /* Preview Content */,
 				C25F536C2D0B30F500FB7E86 /* Supporting Files */,
 			);
@@ -151,6 +156,23 @@
 				C226B58D2CD275E900F4BA44 /* Utils */,
 			);
 			path = "Design System";
+			sourceTree = "<group>";
+		};
+		C29F60E72D4D7A0500DE31B9 /* View Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				C29F60E82D4D7A1700DE31B9 /* SizeChangeObserver */,
+			);
+			path = "View Modifiers";
+			sourceTree = "<group>";
+		};
+		C29F60E82D4D7A1700DE31B9 /* SizeChangeObserver */ = {
+			isa = PBXGroup;
+			children = (
+				C29F60E92D4D7A2100DE31B9 /* SizeChangeObserver.swift */,
+				C29F60EB2D4D7A2F00DE31B9 /* View+observeSizeChange.swift */,
+			);
+			path = SizeChangeObserver;
 			sourceTree = "<group>";
 		};
 		C2E02AE02CF577D0005F8AB6 /* Extensions */ = {
@@ -246,8 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C226B5912CD27F1100F4BA44 /* ArcMoneySize.swift in Sources */,
+				C29F60EA2D4D7A2B00DE31B9 /* SizeChangeObserver.swift in Sources */,
 				C2E6A1282D386C690084E39F /* DropdownRowView.swift in Sources */,
 				C2E02AE22CF57816005F8AB6 /* View+Extensions.swift in Sources */,
+				C29F60EC2D4D7A3400DE31B9 /* View+observeSizeChange.swift in Sources */,
 				C226B58E2CD275E900F4BA44 /* ArcMoneyIcon.swift in Sources */,
 				C2E6A4392D41BF980084E39F /* DropdownData.swift in Sources */,
 				C2E02ADF2CF575B8005F8AB6 /* BackgroundedIconView.swift in Sources */,
