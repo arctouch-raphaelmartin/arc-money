@@ -9,7 +9,6 @@ struct DropdownView: View {
     @Binding var selection: DropdownData?
     
     var options: [DropdownData]
-    var dropdownDirection: DropdownDirection = .top
     
     // MARK: Private Properties
     
@@ -31,14 +30,12 @@ struct DropdownView: View {
     init(
         selection: Binding<DropdownData?>,
         options: [DropdownData],
-        dropdownDirection: DropdownDirection = .top,
         maxOptionsHeight: CGFloat = defaultMaxOptionsHeight,
         backgroundColor: Color = .white,
         unselectedOption: DropdownData = defaultUnselectedOption)
     {
         self._selection = selection
         self.options = options
-        self.dropdownDirection = dropdownDirection
         self.maxOptionsHeight = maxOptionsHeight
         self.backgroundColor = backgroundColor
         self.unselectedOption = unselectedOption
@@ -77,7 +74,7 @@ struct DropdownView: View {
         }
         .frame(height: min(scrollViewContentSize.height, maxOptionsHeight))
         .background(backgroundColor)
-        .transition(.move(edge: dropdownDirection == .top ? .bottom : .top)) // This transition is making the option list slide from the back of the dropdown instead of fading in
+        .transition(.move(edge: .top)) // This transition is making the option list slide from the back of the dropdown instead of fading in.
     }
 
     
@@ -85,10 +82,6 @@ struct DropdownView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            if dropdownDirection == .top && showDropdown {
-                OptionsView()
-            }
-            
             DropdownRowView(
                 leadingIcon: selection?.icon ?? unselectedOption.icon,
                 title: selection?.title ?? unselectedOption.title,
@@ -105,13 +98,13 @@ struct DropdownView: View {
             }
             .zIndex(10) // The higher zIndex ensures that the selected dropdown option is always in front of the option list. Specially important during the options opening/closing animation.
 
-            if dropdownDirection == .bottom && showDropdown {
+            if showDropdown {
                 OptionsView()
             }
         }
         .clipped() // Prevents the options from expanding outside the dropdown area when its collapsed.
         .cornerRadius(.one)
-        .frame(alignment: dropdownDirection == .top ? .bottom : .top) // The alignment makes the options expand from the view, instead of the view relocate itself to show the options
+        .frame(alignment: .top) // The alignment makes the options expand from the view, instead of the view relocate itself to show the options.
         .onAppear {
             UIScrollView.appearance().bounces = false
         }
@@ -146,8 +139,7 @@ struct DropdownView: View {
                 
                 DropdownView(
                     selection: $selection,
-                    options: multipleOptions,
-                    dropdownDirection: .bottom)
+                    options: multipleOptions)
                 .padding(.one)
                 .background(.gray)
                 
@@ -155,8 +147,7 @@ struct DropdownView: View {
                 
                 DropdownView(
                     selection: $selection,
-                    options: twoOptions,
-                    dropdownDirection: .top)
+                    options: twoOptions)
                 .padding(.one)
                 .background(.gray)
                 
