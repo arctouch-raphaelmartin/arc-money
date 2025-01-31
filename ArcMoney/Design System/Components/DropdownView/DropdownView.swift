@@ -19,15 +19,12 @@ struct DropdownView: View {
     
     @State private var showDropdown = false
     
-    // zIndexes are being handled to support multiple DropdownViews being presented in the same View.
-    // Without this, multiple menus will overlap themselves if they're opened at the same time.
-    // These indexes ensure that the last menu that was opened always stays on top.
-    @SceneStorage("drop_down_zindex") private var index = 1000.0
-    @State private var zIndex = 1000.0
-    
     private static let defaultUnselectedOption: DropdownData = .init(
         icon: .settingsUnselected,
         title: "Select")
+    
+    /// The default value used for configuring the maximum size of the options dropdown. A single row has 72pts of height. This property shows the equivalent of 3.5 rows (72pts * 3.5 rows = 252pts).
+    private static let defaultMaxOptionsHeight: CGFloat = 252
     
     // MARK: Lifecycle
     
@@ -35,7 +32,7 @@ struct DropdownView: View {
         selection: Binding<DropdownData?>,
         options: [DropdownData],
         dropdownDirection: DropdownDirection = .top,
-        maxOptionsHeight: CGFloat = 200,
+        maxOptionsHeight: CGFloat = defaultMaxOptionsHeight,
         backgroundColor: Color = .white,
         unselectedOption: DropdownData = defaultUnselectedOption)
     {
@@ -49,9 +46,11 @@ struct DropdownView: View {
     
     // MARK: Internal Methods
     
+    @State private var scrollViewContentSize: CGSize = .zero
+    
     func OptionsView() -> some View {
         ScrollView(.vertical) {
-            VStack(spacing: 0) {
+            LazyVStack(spacing: 0) {
                 ForEach(options, id: \.self) { option in
                     let trailingIcon: ArcMoneyIcon? = (selection == option ? .checkmark : nil)
                     DropdownRowView(
@@ -68,52 +67,51 @@ struct DropdownView: View {
                     }
                 }
             }
+            .overlay(GeometryReader { geometryProxy in
+                Color.clear.onAppear {
+                    withAnimation(.smooth) {
+                        scrollViewContentSize = geometryProxy.size
+                    }
+                }
+            })
         }
-        .frame(maxHeight: 200)
+        .frame(height: min(scrollViewContentSize.height, maxOptionsHeight))
         .background(backgroundColor)
-        .background(.green)
         .transition(.move(edge: dropdownDirection == .top ? .bottom : .top)) // This transition is making the option list slide from the back of the dropdown instead of fading in
-        .zIndex(1)
     }
+
     
     // MARK: Body
     
     var body: some View {
-        GeometryReader {
-            let size = $0.size
+        VStack(spacing: 0) {
+            if dropdownDirection == .top && showDropdown {
+                OptionsView()
+            }
             
-            VStack(spacing: 0) {
-                if dropdownDirection == .top && showDropdown {
-                    OptionsView()
-                }
-                
-                DropdownRowView(
-                    leadingIcon: selection?.icon ?? unselectedOption.icon,
-                    title: selection?.title ?? unselectedOption.title,
-                    backgroundColor: backgroundColor,
-                    trailingContent: {
-                        IconView(icon: .dropdownArrow)
-                            .padding(.half)
-                            .rotationEffect(.degrees((showDropdown ? -180 : 0)))
-                    })
-                .onTapGesture {
-                    index += 1
-                    zIndex = index
-                    withAnimation(.smooth) {
-                        showDropdown.toggle()
-                    }
-                }
-                .zIndex(10) // The higher zIndex ensures that the selected dropdown option is always in front of the option list. Specially important during the options opening/closing animation
-            
-                if dropdownDirection == .bottom && showDropdown {
-                    OptionsView()
+            DropdownRowView(
+                leadingIcon: selection?.icon ?? unselectedOption.icon,
+                title: selection?.title ?? unselectedOption.title,
+                backgroundColor: backgroundColor,
+                trailingContent: {
+                    IconView(icon: .dropdownArrow)
+                        .padding(.half)
+                        .rotationEffect(.degrees((showDropdown ? -180 : 0)))
+                })
+            .onTapGesture {
+                withAnimation(.smooth) {
+                    showDropdown.toggle()
                 }
             }
-            .clipped() // Prevents the options from expanding outside the dropdown area when its collapsed.
-            .cornerRadius(.one)
-            .frame(height: size.height, alignment: dropdownDirection == .top ? .bottom : .top) // The alignment makes the options expand from the view, instead of the view relocate itself to show the options
+            .zIndex(10) // The higher zIndex ensures that the selected dropdown option is always in front of the option list. Specially important during the options opening/closing animation.
+
+            if dropdownDirection == .bottom && showDropdown {
+                OptionsView()
+            }
         }
-        .zIndex(zIndex)
+        .clipped() // Prevents the options from expanding outside the dropdown area when its collapsed.
+        .cornerRadius(.one)
+        .frame(alignment: dropdownDirection == .top ? .bottom : .top) // The alignment makes the options expand from the view, instead of the view relocate itself to show the options
         .onAppear {
             UIScrollView.appearance().bounces = false
         }
@@ -128,7 +126,8 @@ struct DropdownView: View {
 #Preview {
     struct Preview: View {
         @State var selection: DropdownData? = nil
-        var options: [DropdownData] = [
+        
+        var multipleOptions: [DropdownData] = [
             .init(icon: .education, title: "Education"),
             .init(icon: .food, title: "Food"),
             .init(icon: .entertainment, title: "Entertainment"),
@@ -136,20 +135,33 @@ struct DropdownView: View {
             .init(icon: .salary, title: "Salary")
         ]
         
+        var twoOptions: [DropdownData] = [
+            .init(icon: .education, title: "Education"),
+            .init(icon: .food, title: "Food")
+        ]
+        
         var body: some View {
-            DropdownView(
-                selection: $selection,
-                options: options,
-                dropdownDirection: .bottom)
-            .padding(.oneAndThreeQuarters)
-            .background(.gray)
-            
-            DropdownView(
-                selection: $selection,
-                options: options,
-                dropdownDirection: .top)
-            .padding(.oneAndThreeQuarters)
-            .background(.gray)
+            VStack(spacing: .none) {
+                Text("Multiple Options")
+                
+                DropdownView(
+                    selection: $selection,
+                    options: multipleOptions,
+                    dropdownDirection: .bottom)
+                .padding(.one)
+                .background(.gray)
+                
+                Text("Two Options")
+                
+                DropdownView(
+                    selection: $selection,
+                    options: twoOptions,
+                    dropdownDirection: .top)
+                .padding(.one)
+                .background(.gray)
+                
+                Spacer()
+            }
         }
     }
     
