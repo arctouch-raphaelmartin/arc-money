@@ -93,7 +93,7 @@ struct AmountView: View {
         
         Spacer()
         
-        Text("Default: BRL with 0.50 steps")
+        Text("Alternate: BRL with 0.50 steps")
         
         AmountView(value: $value, step: 0.5, currency: .brazilianReal)
             .padding(.oneAndHalf)
