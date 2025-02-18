@@ -1,44 +1,62 @@
 import SwiftUI
 
-// MARK: - DropdownView
+// MARK: - DropdownViewDefaultValue
 
-struct DropdownView: View {
+private struct DropdownViewDefaultValue {
     
     // MARK: Internal Properties
-
-    @Binding var selection: DropdownData?
     
-    var options: [DropdownData]
+    /// The default value used for configuring the maximum size of the options dropdown. A single row has 72pts of height. This property shows the equivalent of 3.5 rows (72pts * 3.5 rows = 252pts).
+    static let maxOptionsHeight: CGFloat = 252
+}
+
+// MARK: - DropdownViewDefaultData
+
+private struct DropdownViewDefaultData: DropdownData {
+    
+    // MARK: Internal Properties
+    
+    static let unselectedOption = Self(icon: .settingsUnselected, title: "Select")
+    
+    var icon: ArcMoneyIcon
+    var title: String
+}
+
+// MARK: - DropdownView
+
+struct DropdownView<DropdownOption: DropdownData>: View {
+    
+    // MARK: Internal Properties
+    
+    @Binding var selection: DropdownOption?
+    
+    var options: [DropdownOption]
     
     // MARK: Private Properties
     
     private let maxOptionsHeight: CGFloat
     private let backgroundColor: Color
-    private let unselectedOption: DropdownData
+    private let unselectedOption: DropdownOption?
     
     @State private var showDropdown = false
     
-    private static let defaultUnselectedOption: DropdownData = .init(
-        icon: .settingsUnselected,
-        title: "Select")
-    
-    /// The default value used for configuring the maximum size of the options dropdown. A single row has 72pts of height. This property shows the equivalent of 3.5 rows (72pts * 3.5 rows = 252pts).
-    private static let defaultMaxOptionsHeight: CGFloat = 252
+    private let defaultUnselectedOption: any DropdownData = DropdownViewDefaultData.unselectedOption
+    private let defaultMaxOptionsHeight: CGFloat = DropdownViewDefaultValue.maxOptionsHeight
     
     // MARK: Lifecycle
     
     init(
-        selection: Binding<DropdownData?>,
-        options: [DropdownData],
-        maxOptionsHeight: CGFloat = defaultMaxOptionsHeight,
+        selection: Binding<DropdownOption?>,
+        options: [DropdownOption],
         backgroundColor: Color = .white,
-        unselectedOption: DropdownData = defaultUnselectedOption)
+        overrideMaxOptionsHeight: CGFloat? = nil,
+        overrideUnselectedOption: DropdownOption? = nil)
     {
         self._selection = selection
         self.options = options
-        self.maxOptionsHeight = maxOptionsHeight
         self.backgroundColor = backgroundColor
-        self.unselectedOption = unselectedOption
+        self.maxOptionsHeight = overrideMaxOptionsHeight ?? defaultMaxOptionsHeight
+        self.unselectedOption = overrideUnselectedOption
     }
     
     // MARK: Internal Methods
@@ -70,15 +88,15 @@ struct DropdownView: View {
         .background(backgroundColor)
         .transition(.move(edge: .top)) // This transition is making the option list slide from the back of the dropdown instead of fading in.
     }
-
+    
     
     // MARK: Body
     
     var body: some View {
         VStack(spacing: 0) {
             DropdownRowView(
-                leadingIcon: selection?.icon ?? unselectedOption.icon,
-                title: selection?.title ?? unselectedOption.title,
+                leadingIcon: selection?.icon ?? unselectedOption?.icon ?? defaultUnselectedOption.icon,
+                title: selection?.title ?? unselectedOption?.title ?? defaultUnselectedOption.title,
                 backgroundColor: backgroundColor,
                 trailingContent: {
                     IconView(icon: .dropdownArrow)
@@ -91,7 +109,7 @@ struct DropdownView: View {
                 }
             }
             .zIndex(10) // The higher zIndex ensures that the selected dropdown option is always in front of the option list. Specially important during the options opening/closing animation.
-
+            
             if showDropdown {
                 OptionsView()
             }
@@ -112,19 +130,19 @@ struct DropdownView: View {
 
 #Preview {
     struct Preview: View {
-        @State var selection: DropdownData? = nil
+        @State var selection: ArcMoneyCategory? = nil
         
-        var multipleOptions: [DropdownData] = [
-            .init(icon: .education, title: "Education"),
-            .init(icon: .food, title: "Food"),
-            .init(icon: .entertainment, title: "Entertainment"),
-            .init(icon: .healthcare, title: "Healthcare"),
-            .init(icon: .salary, title: "Salary")
+        var multipleOptions: [ArcMoneyCategory] = [
+            .education,
+            .food,
+            .entertainment,
+            .healthcare,
+            .salary
         ]
         
-        var twoOptions: [DropdownData] = [
-            .init(icon: .education, title: "Education"),
-            .init(icon: .food, title: "Food")
+        var twoOptions: [ArcMoneyCategory] = [
+            .education,
+            .food,
         ]
         
         var body: some View {

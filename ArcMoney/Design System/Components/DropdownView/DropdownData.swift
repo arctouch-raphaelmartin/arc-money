@@ -1,15 +1,10 @@
 // MARK: - DropdownData
 
-struct DropdownData: Hashable {
+protocol DropdownData: Hashable {
     
     // MARK: Internal Properties
     
-    let icon: ArcMoneyIcon
-    let title: String
+    var icon: ArcMoneyIcon { get }
+    var title: String { get }
     
-    // MARK: Internal Methods
-    
-    static func == (lhs: DropdownData, rhs: DropdownData) -> Bool {
-        lhs.icon == rhs.icon && lhs.title == rhs.title
-    }
 }
