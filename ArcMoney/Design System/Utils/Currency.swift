@@ -29,6 +29,14 @@ enum Currency: String {
         }
     }
     
+    var formatter: NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = self.isoCode
+        
+        return formatter
+    }
+    
     // MARK: Internal Methods
     
     func formatWithSymbol(_ value: Double, floatingPointNumber: Int = 2) -> String {
