@@ -60,8 +60,10 @@ struct AmountView: View {
             
             Spacer()
             
-            Text(currency.formatWithSymbol(value))
+            TextField("Value", value: $value, formatter: currency.formatter)
                 .textStyle(.h1)
+                .multilineTextAlignment(.center)
+                .keyboardType(.numberPad)
             
             Spacer()
             

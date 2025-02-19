@@ -1,10 +1,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var value: Double = 0.0
+    
     var body: some View {
         VStack {
-          Text("Hello, world!")
-            .foregroundColor(.secondary)
+            AmountView(value: $value)
         }
         .padding()
     }
