@@ -7,7 +7,7 @@ enum ArcMoneyIcon: String {
     // MARK: Cases
     
     case shopping = "cart.fill"
-    case food = "fork-knife"
+    case food = "fork.knife"
     case entertainment = "popcorn.fill"
     case transportation = "bus"
     case education = "graduationcap.fill"
@@ -21,6 +21,7 @@ enum ArcMoneyIcon: String {
     case settingsUnselected = "gearshape"
     case settingsSelected = "gearshape.fill"
     case dropdownArrow = "chevron.down"
+    case checkmark = "checkmark.circle.fill"
     
     // MARK: Internal Properties
     
