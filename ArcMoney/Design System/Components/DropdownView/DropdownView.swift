@@ -26,6 +26,13 @@ private struct DropdownViewDefaultData: DropdownData {
     
     var icon: ArcMoneyIcon
     var title: String
+    
+    // MARK: Lifecycle
+    
+    private init(icon: ArcMoneyIcon, title: String) {
+        self.icon = icon
+        self.title = title
+    }
 }
 
 // MARK: - DropdownView
