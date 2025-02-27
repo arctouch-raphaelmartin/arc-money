@@ -56,6 +56,7 @@ struct DropdownView<DropdownOption: DropdownData>: View {
     private let unselectedOption: DropdownOption?
     
     @State private var showDropdown = false
+    @State private var scrollViewContentSize: CGSize = .zero
     
     private let defaultUnselectedOption: any DropdownData = DropdownViewDefaultData.unselectedOption
     private let defaultMaxOptionsHeight: CGFloat = DropdownViewDefaultValue.maxOptionsHeight
@@ -77,8 +78,6 @@ struct DropdownView<DropdownOption: DropdownData>: View {
     }
     
     // MARK: Internal Methods
-    
-    @State private var scrollViewContentSize: CGSize = .zero
     
     func OptionsView() -> some View {
         ScrollView(.vertical) {
