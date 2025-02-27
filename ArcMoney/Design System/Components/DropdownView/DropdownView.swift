@@ -134,12 +134,7 @@ struct DropdownView<DropdownOption: DropdownData>: View {
         .clipped() // Prevents the options from expanding outside the dropdown area when its collapsed.
         .cornerRadius(.one)
         .frame(alignment: .top) // The alignment makes the options expand from the view, instead of the view relocate itself to show the options.
-        .onAppear {
-            UIScrollView.appearance().bounces = false
-        }
-        .onDisappear {
-            UIScrollView.appearance().bounces = true
-        }
+        .disableScrollBounce()
     }
 }
 
