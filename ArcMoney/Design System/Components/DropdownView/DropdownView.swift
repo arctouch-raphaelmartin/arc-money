@@ -2,6 +2,8 @@ import SwiftUI
 
 // MARK: - DropdownViewDefaultValue
 
+/// A Struct containing the default configuration values used by `DropdownView`.
+/// `DropdownView` expects a generic type, which prevents us from defining static properties. Hence why this separate configuration struct exists.
 private struct DropdownViewDefaultValue {
     
     // MARK: Internal Properties
@@ -18,6 +20,8 @@ private struct DropdownViewDefaultValue {
 
 // MARK: - DropdownViewDefaultData
 
+/// A Struct containing default implementations of the generic type used by `DropdownView`.
+/// `DropdownView` expects a generic type, which prevents us from defining static properties. Hence why this separate configuration struct exists.
 private struct DropdownViewDefaultData: DropdownData {
     
     // MARK: Internal Properties
@@ -121,7 +125,7 @@ struct DropdownView<DropdownOption: DropdownData>: View {
                     showDropdown.toggle()
                 }
             }
-            .zIndex(10) // The higher zIndex ensures that the selected dropdown option is always in front of the option list. Specially important during the options opening/closing animation.
+            .zIndex(1) // The higher zIndex ensures that the selected dropdown option is always in front of the option list. Specially important during the options opening/closing animation.
             
             if showDropdown {
                 OptionsView()
