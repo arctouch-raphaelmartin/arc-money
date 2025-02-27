@@ -5,9 +5,13 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            Spacer()
             AmountView(value: $value)
+            Spacer()
         }
         .padding()
+        .background(.red)
+        .unfocusOnTap()
     }
 }
 
