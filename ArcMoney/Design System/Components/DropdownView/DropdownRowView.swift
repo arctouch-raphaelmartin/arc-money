@@ -26,7 +26,17 @@ struct DropdownRowView<TrailingContent: View>: View {
     private let defaultBackcolorOpacity = 0.2
     
     // MARK: Lifecycle
-    
+
+    /// Dedicated initializer for creating a `DropdownRowView` with a trailing icon.
+    /// - Parameters:
+    ///   - leadingIcon: The leading icon to be used.
+    ///   - leadingIconColor: The color to paint the foreground of the leading icon with.
+    ///   - leadingIconBackgroundColor: The color to paint the background of the leading icon with.
+    ///   - title: The title of the row.
+    ///   - backgroundColor: The color to paint the background of the row.
+    ///   - cornerRadius: A radii to round the corners of the row with.
+    ///   - trailingIcon: The trailing icon to be used.
+    ///   - trailingIconColor: The color to paint the foreground of the trailing icon with.
     init(
         leadingIcon: ArcMoneyIcon,
         leadingIconColor: Color = .primary,
@@ -49,6 +59,15 @@ struct DropdownRowView<TrailingContent: View>: View {
             trailingContent: { EmptyView() })
     }
     
+    /// Dedicated initializer for creating a `DropdownRowView` with a trailing custom view.
+    /// - Parameters:
+    ///   - leadingIcon: The leading icon to be used.
+    ///   - leadingIconColor: The color to paint the foreground of the leading icon with.
+    ///   - leadingIconBackgroundColor: The color to paint the background of the leading icon with.
+    ///   - title: The title of the row.
+    ///   - backgroundColor: The color to paint the background of the row.
+    ///   - cornerRadius: A radii to round the corners of the row with.
+    ///   - trailingContent: The content to be used as the trailing view.
     init(
         leadingIcon: ArcMoneyIcon,
         leadingIconColor: Color = .primary,
