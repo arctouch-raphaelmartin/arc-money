@@ -10,6 +10,10 @@ struct AmountView: View {
     let step: Double
     let currency: Currency
     
+    // MARK: Private Properties
+    
+    @FocusState private var valueIsFocused
+    
     // MARK: Lifecycle
     
     init(
@@ -60,10 +64,13 @@ struct AmountView: View {
             
             Spacer()
             
-            TextField("Value", value: $value, formatter: currency.formatter)
+            TextField("Value", value: $value, format: .currency(code: currency.isoCode))
+            // TextField("Value", value: $value, formatter: currency.formatter)
+            // Using `formatter` instead of `format` make UI not update if user deletes the "$".
                 .textStyle(.h1)
                 .multilineTextAlignment(.center)
-                .keyboardType(.numberPad)
+                .keyboardType(.decimalPad)
+                .focused($valueIsFocused) // Added but ended up not using because `decimalPad` and `numberPad` don't have a submit button :(
             
             Spacer()
             
