@@ -8,6 +8,12 @@ private struct DropdownViewDefaultValue {
     
     /// The default value used for configuring the maximum size of the options dropdown. A single row has 72pts of height. This property shows the equivalent of 3.5 rows (72pts * 3.5 rows = 252pts).
     static let maxOptionsHeight: CGFloat = 252
+    
+    // MARK: Lifecycle
+    
+    private init() {
+        // Prevent this struct from being initialized.
+    }
 }
 
 // MARK: - DropdownViewDefaultData
