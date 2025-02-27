@@ -12,6 +12,7 @@
 		BE13CA252CC6983E0015BB46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE13CA242CC6983E0015BB46 /* ContentView.swift */; };
 		BE13CA272CC698400015BB46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE13CA262CC698400015BB46 /* Assets.xcassets */; };
 		BE13CA2A2CC698400015BB46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE13CA292CC698400015BB46 /* Preview Assets.xcassets */; };
+		C21037A82D700E05001CEEBC /* View+UnfocusOnTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21037A72D700DF2001CEEBC /* View+UnfocusOnTap.swift */; };
 		C201FAEC2D2F21BF00592551 /* HStack+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C201FAEB2D2F21BA00592551 /* HStack+Extensions.swift */; };
 		C201FAEE2D2F222D00592551 /* VStack+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C201FAED2D2F222A00592551 /* VStack+Extensions.swift */; };
 		C21037AC2D701FEB001CEEBC /* Vew+DisableScrollBounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21037AB2D701FE3001CEEBC /* Vew+DisableScrollBounce.swift */; };
@@ -46,6 +47,7 @@
 		BE13CA242CC6983E0015BB46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE13CA262CC698400015BB46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE13CA292CC698400015BB46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C21037A72D700DF2001CEEBC /* View+UnfocusOnTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+UnfocusOnTap.swift"; sourceTree = "<group>"; };
 		C201FAEB2D2F21BA00592551 /* HStack+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HStack+Extensions.swift"; sourceTree = "<group>"; };
 		C201FAED2D2F222A00592551 /* VStack+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VStack+Extensions.swift"; sourceTree = "<group>"; };
 		C21037AB2D701FE3001CEEBC /* Vew+DisableScrollBounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vew+DisableScrollBounce.swift"; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		C2E02AE02CF577D0005F8AB6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C21037A72D700DF2001CEEBC /* View+UnfocusOnTap.swift */,
 				C201FAEB2D2F21BA00592551 /* HStack+Extensions.swift */,
 				C21037AB2D701FE3001CEEBC /* Vew+DisableScrollBounce.swift */,
 				C29F60E92D4D7A2100DE31B9 /* View+BindSizeChange.swift */,
@@ -285,6 +288,7 @@
 				C2E02ADD2CF57516005F8AB6 /* ArcMoneySpacing.swift in Sources */,
 				C25D7F852D5D0471005B87CB /* Currency.swift in Sources */,
 				C25F536D2D0B37E200FB7E86 /* Labels.swift in Sources */,
+				C21037A82D700E05001CEEBC /* View+UnfocusOnTap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
