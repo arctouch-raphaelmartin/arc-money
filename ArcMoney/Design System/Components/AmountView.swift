@@ -71,6 +71,7 @@ struct AmountView: View {
                 .multilineTextAlignment(.center)
                 .keyboardType(.decimalPad)
                 .focused($valueIsFocused) // Added but ended up not using because `decimalPad` and `numberPad` don't have a submit button :(
+                .selectAllTextOnBeginEditing()
             
             Spacer()
             
