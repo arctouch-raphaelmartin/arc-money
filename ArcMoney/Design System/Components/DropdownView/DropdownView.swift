@@ -55,7 +55,7 @@ struct DropdownView<DropdownOption: DropdownData>: View {
     private let backgroundColor: Color
     private let unselectedOption: DropdownOption?
     
-    @State private var showDropdown = false
+    @State private var showOptionsView = false
     @State private var scrollViewContentSize: CGSize = .zero
     
     private let defaultUnselectedOption: any DropdownData = DropdownViewDefaultData.unselectedOption
@@ -93,7 +93,7 @@ struct DropdownView<DropdownOption: DropdownData>: View {
                     .onTapGesture {
                         withAnimation(.smooth) {
                             selection = option
-                            showDropdown.toggle()
+                            showOptionsView.toggle()
                         }
                     }
                 }
@@ -117,16 +117,16 @@ struct DropdownView<DropdownOption: DropdownData>: View {
                 trailingContent: {
                     IconView(icon: .dropdownArrow)
                         .padding(.half)
-                        .rotationEffect(.degrees((showDropdown ? -180 : 0)))
+                        .rotationEffect(.degrees((showOptionsView ? -180 : 0)))
                 })
             .onTapGesture {
                 withAnimation(.smooth) {
-                    showDropdown.toggle()
+                    showOptionsView.toggle()
                 }
             }
             .zIndex(1) // The higher zIndex ensures that the selected dropdown option is always in front of the option list. Specially important during the options opening/closing animation.
             
-            if showDropdown {
+            if showOptionsView {
                 OptionsView()
             }
         }
