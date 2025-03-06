@@ -98,7 +98,7 @@ struct DropdownView<DropdownOption: DropdownData>: View {
                     }
                 }
             }
-            .observeSizeChange($scrollViewContentSize, updateWithAnimation: .smooth)
+            .bindSizeChange(to: $scrollViewContentSize, updateWithAnimation: .smooth)
         }
         .frame(height: min(scrollViewContentSize.height, maxOptionsHeight))
         .background(backgroundColor)
