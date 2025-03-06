@@ -12,17 +12,25 @@
 		BE13CA252CC6983E0015BB46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE13CA242CC6983E0015BB46 /* ContentView.swift */; };
 		BE13CA272CC698400015BB46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE13CA262CC698400015BB46 /* Assets.xcassets */; };
 		BE13CA2A2CC698400015BB46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE13CA292CC698400015BB46 /* Preview Assets.xcassets */; };
+		C201FAEC2D2F21BF00592551 /* HStack+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C201FAEB2D2F21BA00592551 /* HStack+Extensions.swift */; };
+		C201FAEE2D2F222D00592551 /* VStack+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C201FAED2D2F222A00592551 /* VStack+Extensions.swift */; };
+		C21037AC2D701FEB001CEEBC /* Vew+DisableScrollBounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21037AB2D701FE3001CEEBC /* Vew+DisableScrollBounce.swift */; };
 		C226B58E2CD275E900F4BA44 /* ArcMoneyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226B58B2CD275E900F4BA44 /* ArcMoneyIcon.swift */; };
 		C226B58F2CD275E900F4BA44 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226B58C2CD275E900F4BA44 /* Colors.swift */; };
 		C226B5912CD27F1100F4BA44 /* ArcMoneySize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226B5902CD27F1100F4BA44 /* ArcMoneySize.swift */; };
 		C25F536D2D0B37E200FB7E86 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844315FA2CF4B4D30073B708 /* Labels.swift */; };
 		C25F53732D0B39BD00FB7E86 /* ReadexPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 844315FC2CF4B5BD0073B708 /* ReadexPro-Medium.ttf */; };
 		C25F53742D0B39C100FB7E86 /* ReadexPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 844315FD2CF4B5BD0073B708 /* ReadexPro-Regular.ttf */; };
+		C26F644B2D654CBD0003366A /* ArcMoneyCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F644A2D654CBD0003366A /* ArcMoneyCategory.swift */; };
 		C27F64652CCFEB3A00F75606 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27F64642CCFEB3A00F75606 /* IconView.swift */; };
+		C29F60EA2D4D7A2B00DE31B9 /* View+BindSizeChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F60E92D4D7A2100DE31B9 /* View+BindSizeChange.swift */; };
 		C2E02ADD2CF57516005F8AB6 /* ArcMoneySpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E02ADC2CF57514005F8AB6 /* ArcMoneySpacing.swift */; };
 		C2E02ADF2CF575B8005F8AB6 /* BackgroundedIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E02ADE2CF575B8005F8AB6 /* BackgroundedIconView.swift */; };
 		C2E02AE22CF57816005F8AB6 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E02AE12CF57812005F8AB6 /* View+Extensions.swift */; };
 		C2E02AE42CF57A5F005F8AB6 /* ArcMoneyCornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E02AE32CF57A5D005F8AB6 /* ArcMoneyCornerRadius.swift */; };
+		C2E6A1282D386C690084E39F /* DropdownRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6A1272D386C680084E39F /* DropdownRowView.swift */; };
+		C2E6A4392D41BF980084E39F /* DropdownData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6A4382D41BF970084E39F /* DropdownData.swift */; };
+		C2F839352D2459D50075324E /* DropdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F839342D2459D30075324E /* DropdownView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,14 +44,22 @@
 		BE13CA242CC6983E0015BB46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE13CA262CC698400015BB46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE13CA292CC698400015BB46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C201FAEB2D2F21BA00592551 /* HStack+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HStack+Extensions.swift"; sourceTree = "<group>"; };
+		C201FAED2D2F222A00592551 /* VStack+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VStack+Extensions.swift"; sourceTree = "<group>"; };
+		C21037AB2D701FE3001CEEBC /* Vew+DisableScrollBounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Vew+DisableScrollBounce.swift"; sourceTree = "<group>"; };
 		C226B58B2CD275E900F4BA44 /* ArcMoneyIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneyIcon.swift; sourceTree = "<group>"; };
 		C226B58C2CD275E900F4BA44 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C226B5902CD27F1100F4BA44 /* ArcMoneySize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneySize.swift; sourceTree = "<group>"; };
+		C26F644A2D654CBD0003366A /* ArcMoneyCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneyCategory.swift; sourceTree = "<group>"; };
 		C27F64642CCFEB3A00F75606 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		C29F60E92D4D7A2100DE31B9 /* View+BindSizeChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+BindSizeChange.swift"; sourceTree = "<group>"; };
 		C2E02ADC2CF57514005F8AB6 /* ArcMoneySpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneySpacing.swift; sourceTree = "<group>"; };
 		C2E02ADE2CF575B8005F8AB6 /* BackgroundedIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundedIconView.swift; sourceTree = "<group>"; };
 		C2E02AE12CF57812005F8AB6 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		C2E02AE32CF57A5D005F8AB6 /* ArcMoneyCornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneyCornerRadius.swift; sourceTree = "<group>"; };
+		C2E6A1272D386C680084E39F /* DropdownRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownRowView.swift; sourceTree = "<group>"; };
+		C2E6A4382D41BF970084E39F /* DropdownData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownData.swift; sourceTree = "<group>"; };
+		C2F839342D2459D30075324E /* DropdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,7 @@
 			children = (
 				849FE2342D26C8E300411789 /* ArcButton.swift */,
 				C2E02ADE2CF575B8005F8AB6 /* BackgroundedIconView.swift */,
+				C2E6A1262D386C300084E39F /* DropdownView */,
 				C27F64642CCFEB3A00F75606 /* IconView.swift */,
 				844315FA2CF4B4D30073B708 /* Labels.swift */,
 			);
@@ -97,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				BE13CA222CC6983E0015BB46 /* ArcMoneyApp.swift */,
+				C26F644A2D654CBD0003366A /* ArcMoneyCategory.swift */,
 				BE13CA242CC6983E0015BB46 /* ContentView.swift */,
 				C27F64632CCFEB2200F75606 /* Design System */,
 				C2E02AE02CF577D0005F8AB6 /* Extensions */,
@@ -148,9 +166,23 @@
 		C2E02AE02CF577D0005F8AB6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C201FAEB2D2F21BA00592551 /* HStack+Extensions.swift */,
+				C21037AB2D701FE3001CEEBC /* Vew+DisableScrollBounce.swift */,
+				C29F60E92D4D7A2100DE31B9 /* View+BindSizeChange.swift */,
 				C2E02AE12CF57812005F8AB6 /* View+Extensions.swift */,
+				C201FAED2D2F222A00592551 /* VStack+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C2E6A1262D386C300084E39F /* DropdownView */ = {
+			isa = PBXGroup;
+			children = (
+				C2E6A4382D41BF970084E39F /* DropdownData.swift */,
+				C2E6A1272D386C680084E39F /* DropdownRowView.swift */,
+				C2F839342D2459D30075324E /* DropdownView.swift */,
+			);
+			path = DropdownView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,10 +258,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				C226B5912CD27F1100F4BA44 /* ArcMoneySize.swift in Sources */,
+				C29F60EA2D4D7A2B00DE31B9 /* View+BindSizeChange.swift in Sources */,
+				C2E6A1282D386C690084E39F /* DropdownRowView.swift in Sources */,
 				C2E02AE22CF57816005F8AB6 /* View+Extensions.swift in Sources */,
 				C226B58E2CD275E900F4BA44 /* ArcMoneyIcon.swift in Sources */,
+				C2E6A4392D41BF980084E39F /* DropdownData.swift in Sources */,
+				C26F644B2D654CBD0003366A /* ArcMoneyCategory.swift in Sources */,
 				C2E02ADF2CF575B8005F8AB6 /* BackgroundedIconView.swift in Sources */,
 				C226B58F2CD275E900F4BA44 /* Colors.swift in Sources */,
+				C201FAEE2D2F222D00592551 /* VStack+Extensions.swift in Sources */,
+				C201FAEC2D2F21BF00592551 /* HStack+Extensions.swift in Sources */,
+				C21037AC2D701FEB001CEEBC /* Vew+DisableScrollBounce.swift in Sources */,
+				C2F839352D2459D50075324E /* DropdownView.swift in Sources */,
 				C27F64652CCFEB3A00F75606 /* IconView.swift in Sources */,
 				BE13CA252CC6983E0015BB46 /* ContentView.swift in Sources */,
 				849FE2352D26C8E700411789 /* ArcButton.swift in Sources */,
