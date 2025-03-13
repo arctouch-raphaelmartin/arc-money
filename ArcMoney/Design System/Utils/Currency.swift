@@ -39,7 +39,7 @@ enum Currency: String {
     
     // MARK: Internal Methods
     
-    func formatWithSymbol(_ value: Double, floatingPointNumber: Int = 2) -> String {
+    func formatWithSymbol(_ value: Double) -> String {
         return value.formatted(.currency(code: self.isoCode))
     }
 }

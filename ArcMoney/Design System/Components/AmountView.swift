@@ -7,6 +7,7 @@ struct AmountView: View {
     // MARK: Internal Properties
     
     @Binding var value: Double
+    
     let step: Double
     let currency: Currency
     
@@ -56,6 +57,34 @@ struct AmountView: View {
         }
     }
     
+    @ViewBuilder
+    var currencyField: some View {
+        let bindingTest = Binding(
+            get: {
+                value
+            },
+            set: { newValue in
+                handleAmountChange(newValue)
+            })
+        
+        TextField("Value", value: bindingTest, format: .currency(code: currency.isoCode))
+            .textStyle(.h1)
+            .multilineTextAlignment(.center)
+            .keyboardType(.decimalPad)
+            .selectAllTextOnBeginEditing()
+    }
+    
+    // Function to handle text input and limit decimal places based on currency
+    private func handleAmountChange(_ value: Double) {
+        // Get the maximum fraction digits allowed by the currency's locale
+        let maxFractionDigits = currency.formatter.minimumFractionDigits
+        
+        // Restrict the amount to the appropriate number of decimal places for the currency
+        let multiplier = pow(10.0, Double(maxFractionDigits))
+        let newValue = floor(value * multiplier) / multiplier
+        self.value = newValue
+    }
+    
     // MARK: Body
     
     var body: some View {
@@ -64,14 +93,7 @@ struct AmountView: View {
             
             Spacer()
             
-            TextField("Value", value: $value, format: .currency(code: currency.isoCode))
-            // TextField("Value", value: $value, formatter: currency.formatter)
-            // Using `formatter` instead of `format` make UI not update if user deletes the "$".
-                .textStyle(.h1)
-                .multilineTextAlignment(.center)
-                .keyboardType(.decimalPad)
-                .focused($valueIsFocused) // Added but ended up not using because `decimalPad` and `numberPad` don't have a submit button :(
-                .selectAllTextOnBeginEditing()
+            currencyField
             
             Spacer()
             
