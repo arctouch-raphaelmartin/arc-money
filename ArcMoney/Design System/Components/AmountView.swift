@@ -10,21 +10,20 @@ struct AmountView: View {
     
     let step: Double
     let currency: Currency
-    
-    // MARK: Private Properties
-    
-    @FocusState private var valueIsFocused
+    let placeholderText: String
     
     // MARK: Lifecycle
     
     init(
         value: Binding<Double>,
         step: Double = 1.0,
-        currency: Currency = .unitedStatesDollar)
+        currency: Currency = .unitedStatesDollar,
+        placeholderText: String = "Value")
     {
         self._value = value
         self.step = step
         self.currency = currency
+        self.placeholderText = placeholderText
     }
     
     // MARK: Auxiliary Components
@@ -59,15 +58,11 @@ struct AmountView: View {
     
     @ViewBuilder
     var currencyField: some View {
-        let bindingTest = Binding(
-            get: {
-                value
-            },
-            set: { newValue in
-                handleAmountChange(newValue)
-            })
+        let truncatedAmount = Binding(
+            get: { value },
+            set: handleAmountChange)
         
-        TextField("Value", value: bindingTest, format: .currency(code: currency.isoCode))
+        TextField(placeholderText, value: truncatedAmount, format: .currency(code: currency.isoCode))
             .textStyle(.h1)
             .multilineTextAlignment(.center)
             .keyboardType(.decimalPad)
