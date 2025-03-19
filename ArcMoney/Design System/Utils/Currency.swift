@@ -11,15 +11,6 @@ enum Currency: String {
     
     // MARK: Internal Properties
     
-    var symbol: String {
-        switch self {
-        case .brazilianReal:
-            "R$"
-        case .unitedStatesDollar:
-            "$"
-        }
-    }
-    
     var isoCode: String {
         switch self {
         case .brazilianReal:
@@ -35,11 +26,5 @@ enum Currency: String {
         formatter.currencyCode = self.isoCode
         
         return formatter
-    }
-    
-    // MARK: Internal Methods
-    
-    func formatWithSymbol(_ value: Double) -> String {
-        return value.formatted(.currency(code: self.isoCode))
     }
 }
