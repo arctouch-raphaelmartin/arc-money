@@ -1,6 +1,6 @@
 import SwiftUI
 
-// MARk: - BackgroundedIconView
+// MARK: - BackgroundedIconView
 
 struct BackgroundedIconView: View {
     
