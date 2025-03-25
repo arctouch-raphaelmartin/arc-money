@@ -23,7 +23,7 @@ struct DropdownRowView<TrailingContent: View>: View {
     
     /// A helper constant designed to help provide a default placeholder background color for an icon, in case none is specified.
     /// The default background color will be based on the default `iconColor`.
-    private let defaultBackcolorOpacity = 0.2
+    private let defaultBackgroundColorOpacity = 0.2
     
     // MARK: Lifecycle
 
@@ -102,7 +102,7 @@ struct DropdownRowView<TrailingContent: View>: View {
     {
         self.leadingIcon = leadingIcon
         self.leadingIconColor = leadingIconColor
-        self.leadingIconBackgroundColor = leadingIconBackgroundColor ?? leadingIconColor.opacity(defaultBackcolorOpacity)
+        self.leadingIconBackgroundColor = leadingIconBackgroundColor ?? leadingIconColor.opacity(defaultBackgroundColorOpacity)
         
         self.title = title
         self.backgroundColor = backgroundColor
