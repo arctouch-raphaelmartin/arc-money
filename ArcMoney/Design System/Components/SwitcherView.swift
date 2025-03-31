@@ -72,9 +72,6 @@ struct SwitcherView<Data: SwitcherData>: View {
                             Capsule()
                                 .fill(Color.primary)
                                 .matchedGeometryEffect(id: selectedPillID, in: animation)
-                        } else {
-                            Capsule()
-                                .fill(Color.clear)
                         }
                     }
                     .foregroundColor(selectedOption == option ? Color.white : Color.gray)
