@@ -9,7 +9,7 @@ struct RoundButton: View {
     let icon: ArcMoneyIcon
     let iconSize: ArcMoneySize
     let iconColor: Color
-    let padding: ArcMoneySpacing
+    let iconPadding: ArcMoneySpacing
     let backgroundColor: Color
     let action: () -> Void
     
@@ -19,14 +19,14 @@ struct RoundButton: View {
         icon: ArcMoneyIcon,
         iconSize: ArcMoneySize = .small,
         iconColor: Color = .primary,
-        padding: ArcMoneySpacing = .threeQuarters,
+        iconPadding: ArcMoneySpacing = .threeQuarters,
         backgroundColor: Color = .clear,
         action: @escaping () -> Void)
     {
         self.icon = icon
         self.iconSize = iconSize
         self.iconColor = iconColor
-        self.padding = padding
+        self.iconPadding = iconPadding
         self.backgroundColor = backgroundColor
         self.action = action
     }
@@ -35,11 +35,14 @@ struct RoundButton: View {
     
     var body: some View {
         Button(action: action) {
-            IconView(icon: icon, size: iconSize, color: iconColor)
-                .padding(padding)
+            BackgroundedIconView(
+                icon: icon,
+                size: iconSize,
+                color: iconColor,
+                iconPadding: iconPadding,
+                backgroundColor: backgroundColor,
+                cornerRadius: .fullCircle)
         }
-        .background(backgroundColor)
-        .clipShape(Circle())
     }
 }
 
@@ -160,7 +163,7 @@ struct RoundButton: View {
                     RoundButton(
                         icon: .checkmark,
                         iconSize: .medium,
-                        padding: .zero,
+                        iconPadding: .zero,
                         backgroundColor: .secondary)
                     {
                         print("Tap")
@@ -175,7 +178,7 @@ struct RoundButton: View {
                     RoundButton(
                         icon: .checkmark,
                         iconSize: .medium,
-                        padding: .half,
+                        iconPadding: .half,
                         backgroundColor: .secondary)
                     {
                         print("Tap")
@@ -190,7 +193,7 @@ struct RoundButton: View {
                     RoundButton(
                         icon: .checkmark,
                         iconSize: .medium,
-                        padding: .one,
+                        iconPadding: .one,
                         backgroundColor: .secondary)
                     {
                         print("Tap")
