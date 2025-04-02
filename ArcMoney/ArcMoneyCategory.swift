@@ -1,3 +1,5 @@
+import SwiftUI
+
 // MARK: - ArcMoneyCategory
 
 enum ArcMoneyCategory: DropdownData {
@@ -40,5 +42,13 @@ enum ArcMoneyCategory: DropdownData {
         case .salary:
             .salary
         }
+    }
+    
+    var color: Color {
+        .black // TODO: Placeholder color until we decide what to do.
+    }
+    
+    var backgroundColor: Color {
+        .red // TODO: Placeholder color until we decide what to do.
     }
 }
