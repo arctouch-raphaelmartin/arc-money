@@ -10,6 +10,10 @@ extension View {
         padding(spacing.rawValue)
     }
     
+    func padding(_ edges: Edge.Set, _ spacing: ArcMoneySpacing) -> some View {
+        padding(edges, spacing.rawValue)
+    }
+    
     // MARK: Corner Radius
     
     @ViewBuilder
