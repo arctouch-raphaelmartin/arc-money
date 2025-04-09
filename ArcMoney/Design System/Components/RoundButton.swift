@@ -20,7 +20,7 @@ struct RoundButton: View {
         iconSize: ArcMoneySize = .small,
         iconColor: Color = .primary,
         iconPadding: ArcMoneySpacing = .threeQuarters,
-        backgroundColor: Color = .clear,
+        backgroundColor: Color = .white,
         action: @escaping () -> Void)
     {
         self.icon = icon
