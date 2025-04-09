@@ -20,6 +20,7 @@
 		C226B58E2CD275E900F4BA44 /* ArcMoneyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226B58B2CD275E900F4BA44 /* ArcMoneyIcon.swift */; };
 		C226B58F2CD275E900F4BA44 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226B58C2CD275E900F4BA44 /* Colors.swift */; };
 		C226B5912CD27F1100F4BA44 /* ArcMoneySize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226B5902CD27F1100F4BA44 /* ArcMoneySize.swift */; };
+		C23C3E392D9B58CB00533361 /* TransactionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23C3E382D9B58C100533361 /* TransactionCard.swift */; };
 		C25D7F832D5CFC61005B87CB /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25D7F822D5CFC5B005B87CB /* AmountView.swift */; };
 		C25D7F852D5D0471005B87CB /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25D7F842D5D0467005B87CB /* Currency.swift */; };
 		C25A7D2E2D8B85D600465C4C /* SwitcherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25A7D2D2D8B85D200465C4C /* SwitcherView.swift */; };
@@ -57,6 +58,7 @@
 		C226B58B2CD275E900F4BA44 /* ArcMoneyIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneyIcon.swift; sourceTree = "<group>"; };
 		C226B58C2CD275E900F4BA44 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C226B5902CD27F1100F4BA44 /* ArcMoneySize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneySize.swift; sourceTree = "<group>"; };
+		C23C3E382D9B58C100533361 /* TransactionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCard.swift; sourceTree = "<group>"; };
 		C25D7F822D5CFC5B005B87CB /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		C25D7F842D5D0467005B87CB /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		C25A7D2D2D8B85D200465C4C /* SwitcherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitcherView.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		844315F92CF4B4A90073B708 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C23C3E382D9B58C100533361 /* TransactionCard.swift */,
 				C25D7F822D5CFC5B005B87CB /* AmountView.swift */,
 				C25A7D2D2D8B85D200465C4C /* SwitcherView.swift */,
 				849FE2342D26C8E300411789 /* ArcButton.swift */,
@@ -287,6 +290,7 @@
 				C21037AC2D701FEB001CEEBC /* View+DisableScrollBounce.swift in Sources */,
 				C2F839352D2459D50075324E /* DropdownView.swift in Sources */,
 				C27F64652CCFEB3A00F75606 /* IconView.swift in Sources */,
+				C23C3E392D9B58CB00533361 /* TransactionCard.swift in Sources */,
 				BE13CA252CC6983E0015BB46 /* ContentView.swift in Sources */,
 				849FE2352D26C8E700411789 /* ArcButton.swift in Sources */,
 				C25A7D2E2D8B85D600465C4C /* SwitcherView.swift in Sources */,
