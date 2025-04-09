@@ -21,7 +21,7 @@ struct TransactionCard: View {
         }
         .padding([.leading, .top, .bottom], .half)
         .padding(.trailing, .one)
-        .background(.gray)
+        .background(.white)
         .cornerRadius(.one)
     }
     
@@ -61,10 +61,55 @@ struct TransactionCard: View {
 // MARK: - Preview
 
 #Preview {
-    TransactionCard(
-        category: .entertainment,
-        title: "YouTube",
-        subtitle: "16:30 PM",
-        value: -60,
-        currency: .unitedStatesDollar)
+    VStack {
+        Spacer()
+        
+        Text("TransactionCard Component")
+            .textStyle(.h1)
+            .multilineTextAlignment(.center)
+        
+        Spacer()
+        
+        VStack {
+            
+            TransactionCard(
+                category: .education,
+                title: "College",
+                subtitle: "10:00 AM",
+                value: -500,
+                currency: .unitedStatesDollar)
+            
+            TransactionCard(
+                category: .food,
+                title: "Burrito Delivery",
+                subtitle: "13:02 PM",
+                value: -9.99,
+                currency: .unitedStatesDollar)
+            
+            TransactionCard(
+                category: .entertainment,
+                title: "YouTube",
+                subtitle: "14:27 PM",
+                value: -4.99,
+                currency: .unitedStatesDollar)
+            
+            TransactionCard(
+                category: .healthcare,
+                title: "Paracetamol",
+                subtitle: "12:30 PM",
+                value: -7.49,
+                currency: .unitedStatesDollar)
+            
+            TransactionCard(
+                category: .salary,
+                title: "Salary",
+                subtitle: "17:00 PM",
+                value: -1000,
+                currency: .unitedStatesDollar)
+        }
+        .padding(.one)
+        
+        Spacer()
+    }
+    .background(.gray)
 }
