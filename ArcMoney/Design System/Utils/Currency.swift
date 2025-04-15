@@ -27,4 +27,10 @@ enum Currency: String {
         
         return formatter
     }
+    
+    // MARK: Internal Methods
+    
+    func formatWithSymbol(_ value: Double) -> String {
+        return value.formatted(.currency(code: self.isoCode))
+    }
 }
