@@ -4,7 +4,7 @@ import SwiftUI
 struct ArcMoneyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppView()
         }
     }
 }
