@@ -16,6 +16,7 @@
 		C21037A82D700E05001CEEBC /* View+UnfocusOnTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21037A72D700DF2001CEEBC /* View+UnfocusOnTap.swift */; };
 		C21037AA2D7015DE001CEEBC /* View+SelectAllTextOnBeginEditing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21037A92D70158F001CEEBC /* View+SelectAllTextOnBeginEditing.swift */; };
 		C21037AC2D701FEB001CEEBC /* View+DisableScrollBounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21037AB2D701FE3001CEEBC /* View+DisableScrollBounce.swift */; };
+		C217C3762DD57EDB005AE7B5 /* AppSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C217C3752DD57ED9005AE7B5 /* AppSettingsManager.swift */; };
 		C226B58E2CD275E900F4BA44 /* ArcMoneyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226B58B2CD275E900F4BA44 /* ArcMoneyIcon.swift */; };
 		C226B58F2CD275E900F4BA44 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226B58C2CD275E900F4BA44 /* Colors.swift */; };
 		C226B5912CD27F1100F4BA44 /* ArcMoneySize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C226B5902CD27F1100F4BA44 /* ArcMoneySize.swift */; };
@@ -33,6 +34,7 @@
 		C26C3D382DCC2B23008A4212 /* TabPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C3D372DCC2B20008A4212 /* TabPresentable.swift */; };
 		C26C3D3A2DCC2B74008A4212 /* TabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C3D392DCC2B72008A4212 /* TabState.swift */; };
 		C26C3D3C2DCC2DF0008A4212 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C3D3B2DCC2DED008A4212 /* AppTabView.swift */; };
+		C26C456B2DD53905008A4212 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C26C456A2DD53905008A4212 /* Settings.bundle */; };
 		C26F644B2D654CBD0003366A /* ArcMoneyCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F644A2D654CBD0003366A /* ArcMoneyCategory.swift */; };
 		C27F64652CCFEB3A00F75606 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27F64642CCFEB3A00F75606 /* IconView.swift */; };
 		C29F60EA2D4D7A2B00DE31B9 /* View+BindSizeChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F60E92D4D7A2100DE31B9 /* View+BindSizeChange.swift */; };
@@ -60,6 +62,7 @@
 		C21037A72D700DF2001CEEBC /* View+UnfocusOnTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+UnfocusOnTap.swift"; sourceTree = "<group>"; };
 		C21037A92D70158F001CEEBC /* View+SelectAllTextOnBeginEditing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+SelectAllTextOnBeginEditing.swift"; sourceTree = "<group>"; };
 		C21037AB2D701FE3001CEEBC /* View+DisableScrollBounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+DisableScrollBounce.swift"; sourceTree = "<group>"; };
+		C217C3752DD57ED9005AE7B5 /* AppSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsManager.swift; sourceTree = "<group>"; };
 		C226B58B2CD275E900F4BA44 /* ArcMoneyIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneyIcon.swift; sourceTree = "<group>"; };
 		C226B58C2CD275E900F4BA44 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C226B5902CD27F1100F4BA44 /* ArcMoneySize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneySize.swift; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		C26C3D372DCC2B20008A4212 /* TabPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPresentable.swift; sourceTree = "<group>"; };
 		C26C3D392DCC2B72008A4212 /* TabState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabState.swift; sourceTree = "<group>"; };
 		C26C3D3B2DCC2DED008A4212 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		C26C456A2DD53905008A4212 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C26F644A2D654CBD0003366A /* ArcMoneyCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneyCategory.swift; sourceTree = "<group>"; };
 		C27F64642CCFEB3A00F75606 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		C29F60E92D4D7A2100DE31B9 /* View+BindSizeChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+BindSizeChange.swift"; sourceTree = "<group>"; };
@@ -141,9 +145,10 @@
 		BE13CA212CC6983E0015BB46 /* ArcMoney */ = {
 			isa = PBXGroup;
 			children = (
-				C26C3D352DCC2AFE008A4212 /* Navigation */,
-				BE13CA222CC6983E0015BB46 /* ArcMoneyApp.swift */,
 				C26F644A2D654CBD0003366A /* ArcMoneyCategory.swift */,
+				BE13CA222CC6983E0015BB46 /* ArcMoneyApp.swift */,
+				C217C3722DD57C56005AE7B5 /* AppSettingsManager */,
+				C26C3D352DCC2AFE008A4212 /* Navigation */,
 				C26C3D2B2DCC2952008A4212 /* Screens */,
 				C27F64632CCFEB2200F75606 /* Design System */,
 				C2E02AE02CF577D0005F8AB6 /* Extensions */,
@@ -159,6 +164,15 @@
 				BE13CA292CC698400015BB46 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C217C3722DD57C56005AE7B5 /* AppSettingsManager */ = {
+			isa = PBXGroup;
+			children = (
+				C217C3752DD57ED9005AE7B5 /* AppSettingsManager.swift */,
+				C26C456A2DD53905008A4212 /* Settings.bundle */,
+			);
+			path = AppSettingsManager;
 			sourceTree = "<group>";
 		};
 		C226B58D2CD275E900F4BA44 /* Utils */ = {
@@ -329,6 +343,7 @@
 			files = (
 				BE13CA2A2CC698400015BB46 /* Preview Assets.xcassets in Resources */,
 				C25F53732D0B39BD00FB7E86 /* ReadexPro-Medium.ttf in Resources */,
+				C26C456B2DD53905008A4212 /* Settings.bundle in Resources */,
 				C25F53742D0B39C100FB7E86 /* ReadexPro-Regular.ttf in Resources */,
 				BE13CA272CC698400015BB46 /* Assets.xcassets in Resources */,
 			);
@@ -372,6 +387,7 @@
 				C25F536D2D0B37E200FB7E86 /* Labels.swift in Sources */,
 				C21037AA2D7015DE001CEEBC /* View+SelectAllTextOnBeginEditing.swift in Sources */,
 				C26C3D342DCC2A4A008A4212 /* SettingsView.swift in Sources */,
+				C217C3762DD57EDB005AE7B5 /* AppSettingsManager.swift in Sources */,
 				C21037A82D700E05001CEEBC /* View+UnfocusOnTap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
