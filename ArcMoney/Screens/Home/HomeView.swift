@@ -11,7 +11,7 @@ struct HomeView: View {
     // MARK: Body
     
     var body: some View {
-        VStack {
+        VStack(spacing: .one) {
             Text("This is the Home View")
             
             Button("Go to Settings") {

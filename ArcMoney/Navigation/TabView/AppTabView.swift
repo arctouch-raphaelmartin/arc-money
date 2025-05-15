@@ -6,6 +6,8 @@ struct AppTabView: View {
     
     // MARK: Internal Properties
     
+    let appSettingsManager = AppSettingsManager()
+    
     @State var selectedTab: TabIdentifier = .home
     @StateObject var tabState = TabState()
     
@@ -23,6 +25,7 @@ struct AppTabView: View {
                 .tabPresentable()
         }
         .environmentObject(tabState)
+        .environmentObject(appSettingsManager)
     }
 }
 
