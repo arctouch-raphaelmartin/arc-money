@@ -35,6 +35,9 @@
 		C26C3D3C2DCC2DF0008A4212 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C3D3B2DCC2DED008A4212 /* AppTabView.swift */; };
 		C26F644B2D654CBD0003366A /* ArcMoneyCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F644A2D654CBD0003366A /* ArcMoneyCategory.swift */; };
 		C27F64652CCFEB3A00F75606 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27F64642CCFEB3A00F75606 /* IconView.swift */; };
+		C29F103D2DDE85D300650F52 /* AppSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F103C2DDE85CE00650F52 /* AppSettingsManager.swift */; };
+		C29F103F2DDE8BB700650F52 /* UserDefaultsAppSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F103E2DDE8BB600650F52 /* UserDefaultsAppSettingsManager.swift */; };
+		C29F10412DDE8BE500650F52 /* InMemoryAppSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F10402DDE8BE400650F52 /* InMemoryAppSettingsManager.swift */; };
 		C29F60EA2D4D7A2B00DE31B9 /* View+BindSizeChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F60E92D4D7A2100DE31B9 /* View+BindSizeChange.swift */; };
 		C2E02ADD2CF57516005F8AB6 /* ArcMoneySpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E02ADC2CF57514005F8AB6 /* ArcMoneySpacing.swift */; };
 		C2E02ADF2CF575B8005F8AB6 /* BackgroundedIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E02ADE2CF575B8005F8AB6 /* BackgroundedIconView.swift */; };
@@ -76,6 +79,9 @@
 		C26C3D3B2DCC2DED008A4212 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		C26F644A2D654CBD0003366A /* ArcMoneyCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneyCategory.swift; sourceTree = "<group>"; };
 		C27F64642CCFEB3A00F75606 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		C29F103C2DDE85CE00650F52 /* AppSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsManager.swift; sourceTree = "<group>"; };
+		C29F103E2DDE8BB600650F52 /* UserDefaultsAppSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsAppSettingsManager.swift; sourceTree = "<group>"; };
+		C29F10402DDE8BE400650F52 /* InMemoryAppSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryAppSettingsManager.swift; sourceTree = "<group>"; };
 		C29F60E92D4D7A2100DE31B9 /* View+BindSizeChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+BindSizeChange.swift"; sourceTree = "<group>"; };
 		C2E02ADC2CF57514005F8AB6 /* ArcMoneySpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneySpacing.swift; sourceTree = "<group>"; };
 		C2E02ADE2CF575B8005F8AB6 /* BackgroundedIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundedIconView.swift; sourceTree = "<group>"; };
@@ -141,6 +147,7 @@
 		BE13CA212CC6983E0015BB46 /* ArcMoney */ = {
 			isa = PBXGroup;
 			children = (
+				C29F103B2DDE85C100650F52 /* AppSettingsManager */,
 				C26C3D352DCC2AFE008A4212 /* Navigation */,
 				BE13CA222CC6983E0015BB46 /* ArcMoneyApp.swift */,
 				C26F644A2D654CBD0003366A /* ArcMoneyCategory.swift */,
@@ -243,6 +250,16 @@
 				C226B58D2CD275E900F4BA44 /* Utils */,
 			);
 			path = "Design System";
+			sourceTree = "<group>";
+		};
+		C29F103B2DDE85C100650F52 /* AppSettingsManager */ = {
+			isa = PBXGroup;
+			children = (
+				C29F103C2DDE85CE00650F52 /* AppSettingsManager.swift */,
+				C29F10402DDE8BE400650F52 /* InMemoryAppSettingsManager.swift */,
+				C29F103E2DDE8BB600650F52 /* UserDefaultsAppSettingsManager.swift */,
+			);
+			path = AppSettingsManager;
 			sourceTree = "<group>";
 		};
 		C2E02AE02CF577D0005F8AB6 /* Extensions */ = {
@@ -351,6 +368,7 @@
 				C26F644B2D654CBD0003366A /* ArcMoneyCategory.swift in Sources */,
 				C2E02ADF2CF575B8005F8AB6 /* BackgroundedIconView.swift in Sources */,
 				C226B58F2CD275E900F4BA44 /* Colors.swift in Sources */,
+				C29F103D2DDE85D300650F52 /* AppSettingsManager.swift in Sources */,
 				C26C3D3C2DCC2DF0008A4212 /* AppTabView.swift in Sources */,
 				C25D7F832D5CFC61005B87CB /* AmountView.swift in Sources */,
 				C201FAEE2D2F222D00592551 /* VStack+Extensions.swift in Sources */,
@@ -360,7 +378,9 @@
 				C21037AC2D701FEB001CEEBC /* View+DisableScrollBounce.swift in Sources */,
 				C2F839352D2459D50075324E /* DropdownView.swift in Sources */,
 				C26C3D3A2DCC2B74008A4212 /* TabState.swift in Sources */,
+				C29F10412DDE8BE500650F52 /* InMemoryAppSettingsManager.swift in Sources */,
 				C27F64652CCFEB3A00F75606 /* IconView.swift in Sources */,
+				C29F103F2DDE8BB700650F52 /* UserDefaultsAppSettingsManager.swift in Sources */,
 				C23C3E392D9B58CB00533361 /* TransactionCard.swift in Sources */,
 				849FE2352D26C8E700411789 /* ArcButton.swift in Sources */,
 				C25A7D2E2D8B85D600465C4C /* SwitcherView.swift in Sources */,

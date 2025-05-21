@@ -4,10 +4,44 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    // MARK: Private Properties
+    
+    private let appSettingsManager: AppSettingsManager = UserDefaultsAppSettingsManager()
+    
+    private var currencyCurrency: String {
+        appSettingsManager.currency.isoCode
+    }
+    
     // MARK: Body
     
     var body: some View {
-        Text("This is the Settings View")
+        VStack(spacing: .one) {
+            Text("This is the Settings View")
+            
+            currencySelector
+        }
+    }
+    
+    // MARK: Auxiliary Views
+    
+    private var currencySelector: some View {
+        VStack {
+            Text("Current Currency: \(currencyCurrency)")
+            
+            HStack(spacing: .half) {
+                Button {
+                    appSettingsManager.setCurrency(.unitedStatesDollar)
+                } label: {
+                    Text("Set USD")
+                }
+                
+                Button {
+                    appSettingsManager.setCurrency(.brazilianReal)
+                } label: {
+                    Text("Set BRL")
+                }
+            }
+        }
     }
 }
 
