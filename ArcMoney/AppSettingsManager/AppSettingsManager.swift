@@ -1,6 +1,8 @@
+import Combine
+
 // MARK: - AppSettingsManager
 
-protocol AppSettingsManager {
+protocol AppSettingsManager: ObservableObject {
     
     // MARK: Default Values
     
@@ -10,11 +12,7 @@ protocol AppSettingsManager {
     // MARK: Currency
     
     /// The currently selected currency to be used throughout the app.
-    var currency: Currency { get }
-    
-    /// Saves a new currency to be used throughout the app.
-    /// - Parameter currency: The new currency to be saved.
-    func setCurrency(_ currency: Currency)
+    var currency: Currency { get set }
 }
 
 // MARK: - Default Implementations
