@@ -6,7 +6,10 @@ struct SettingsView: View {
     
     // MARK: Private Properties
     
-    private let appSettingsManager: AppSettingsManager = UserDefaultsAppSettingsManager()
+    @StateObject
+    private var appSettingsManager = UserDefaultsAppSettingsManager()
+//    private var appSettingsManager = InMemoryAppSettingsManager()
+//    private var appSettingsManager = UserDefaultsAppSettingsManagerChatGPT()
     
     private var currencyCurrency: String {
         appSettingsManager.currency.isoCode
@@ -30,13 +33,13 @@ struct SettingsView: View {
             
             HStack(spacing: .half) {
                 Button {
-                    appSettingsManager.setCurrency(.unitedStatesDollar)
+                    appSettingsManager.currency = .unitedStatesDollar
                 } label: {
                     Text("Set USD")
                 }
                 
                 Button {
-                    appSettingsManager.setCurrency(.brazilianReal)
+                    appSettingsManager.currency = .brazilianReal
                 } label: {
                     Text("Set BRL")
                 }

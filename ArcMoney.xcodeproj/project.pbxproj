@@ -38,6 +38,7 @@
 		C29F103D2DDE85D300650F52 /* AppSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F103C2DDE85CE00650F52 /* AppSettingsManager.swift */; };
 		C29F103F2DDE8BB700650F52 /* UserDefaultsAppSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F103E2DDE8BB600650F52 /* UserDefaultsAppSettingsManager.swift */; };
 		C29F10412DDE8BE500650F52 /* InMemoryAppSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F10402DDE8BE400650F52 /* InMemoryAppSettingsManager.swift */; };
+		C29F10432DDE9F8300650F52 /* UserDefaultsAppSettingsManagerChatGPT.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F10422DDE9F8100650F52 /* UserDefaultsAppSettingsManagerChatGPT.swift */; };
 		C29F60EA2D4D7A2B00DE31B9 /* View+BindSizeChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F60E92D4D7A2100DE31B9 /* View+BindSizeChange.swift */; };
 		C2E02ADD2CF57516005F8AB6 /* ArcMoneySpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E02ADC2CF57514005F8AB6 /* ArcMoneySpacing.swift */; };
 		C2E02ADF2CF575B8005F8AB6 /* BackgroundedIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E02ADE2CF575B8005F8AB6 /* BackgroundedIconView.swift */; };
@@ -82,6 +83,7 @@
 		C29F103C2DDE85CE00650F52 /* AppSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsManager.swift; sourceTree = "<group>"; };
 		C29F103E2DDE8BB600650F52 /* UserDefaultsAppSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsAppSettingsManager.swift; sourceTree = "<group>"; };
 		C29F10402DDE8BE400650F52 /* InMemoryAppSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryAppSettingsManager.swift; sourceTree = "<group>"; };
+		C29F10422DDE9F8100650F52 /* UserDefaultsAppSettingsManagerChatGPT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsAppSettingsManagerChatGPT.swift; sourceTree = "<group>"; };
 		C29F60E92D4D7A2100DE31B9 /* View+BindSizeChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+BindSizeChange.swift"; sourceTree = "<group>"; };
 		C2E02ADC2CF57514005F8AB6 /* ArcMoneySpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneySpacing.swift; sourceTree = "<group>"; };
 		C2E02ADE2CF575B8005F8AB6 /* BackgroundedIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundedIconView.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				C29F103C2DDE85CE00650F52 /* AppSettingsManager.swift */,
 				C29F10402DDE8BE400650F52 /* InMemoryAppSettingsManager.swift */,
 				C29F103E2DDE8BB600650F52 /* UserDefaultsAppSettingsManager.swift */,
+				C29F10422DDE9F8100650F52 /* UserDefaultsAppSettingsManagerChatGPT.swift */,
 			);
 			path = AppSettingsManager;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				C2E6A1282D386C690084E39F /* DropdownRowView.swift in Sources */,
 				C2E02AE22CF57816005F8AB6 /* View+Extensions.swift in Sources */,
 				C226B58E2CD275E900F4BA44 /* ArcMoneyIcon.swift in Sources */,
+				C29F10432DDE9F8300650F52 /* UserDefaultsAppSettingsManagerChatGPT.swift in Sources */,
 				C2E6A4392D41BF980084E39F /* DropdownData.swift in Sources */,
 				C26C3D322DCC2A03008A4212 /* StatisticsView.swift in Sources */,
 				C26F644B2D654CBD0003366A /* ArcMoneyCategory.swift in Sources */,
