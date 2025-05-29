@@ -21,7 +21,7 @@ extension SettingsView: TabPresentable {
         Label("Settings", systemImage: "gearshape")
     }
 
-    var tabIdentifier: TabIdentifier {
+    static var tabIdentifier: TabIdentifier {
         .settings
     }
 }

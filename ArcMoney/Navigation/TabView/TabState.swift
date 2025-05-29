@@ -18,4 +18,5 @@ enum TabIdentifier: CaseIterable {
     case home
     case statistics
     case settings
+    case profile
 }

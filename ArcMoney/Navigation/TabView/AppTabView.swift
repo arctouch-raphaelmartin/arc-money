@@ -6,21 +6,21 @@ struct AppTabView: View {
     
     // MARK: Internal Properties
     
-    @State var selectedTab: TabIdentifier = .home
     @StateObject var tabState = TabState()
+    
+    @EnvironmentObject
+    var tabManager: TabManager
     
     // MARK: Body
     
     var body: some View {
         TabView(selection: $tabState.selectedTab) {
-            HomeView()
-                .tabPresentable()
-            
-            StatisticsView()
-                .tabPresentable()
-            
-            SettingsView()
-                .tabPresentable()
+            ForEach(tabManager.tabsFactory, id: \.id) { factory in
+                 AnyView(
+                    factory.makeTab()
+                        .tabPresentable()
+                )
+            }
         }
         .environmentObject(tabState)
     }
@@ -30,4 +30,5 @@ struct AppTabView: View {
 
 #Preview {
     AppTabView()
+        .environmentObject(TabManager())
 }
