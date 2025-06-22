@@ -24,6 +24,7 @@ enum ArcMoneyIcon: String {
     case plus = "plus"
     case minus = "minus"
     case checkmark = "checkmark.circle.fill"
+    case ellipsis = "ellipsis"
     
     // MARK: Internal Properties
     

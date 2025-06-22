@@ -10,6 +10,10 @@ enum ArcMoneyCornerRadius: CGFloat {
     case none = 0
     /// 4 pts of radius.
     case quarter = 4
+    /// 8 pts of radius.
+    case half = 8
+    /// 12 pts of radius.
+    case threeQuarters = 12
     /// 16 pts of radius.
     case one = 16
     /// 20 pts of radius.

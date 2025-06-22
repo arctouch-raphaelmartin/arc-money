@@ -5,6 +5,8 @@ extension Color {
     static let dark = Color("Dark")
     static let gray = Color("Gray")
     static let light = Color("Light")
+    static let lightGray = Color("LightGray")
+    static let lighterGray = Color("LighterGray")
     static let primary = Color("Primary")
     static let secondary = Color("Secondary")
 }
