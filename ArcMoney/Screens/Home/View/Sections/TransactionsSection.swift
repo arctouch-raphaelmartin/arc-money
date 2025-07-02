@@ -7,7 +7,7 @@ struct TransactionsSection: View {
     // MARK: Body
     
     var body: some View {
-        VStack(alignment: .leading, spacing: .oneAndHalf) {
+        VStack(alignment: .leading, spacing: .one) {
             header
             transactionList
         }
@@ -21,21 +21,25 @@ struct TransactionsSection: View {
             .foregroundStyle(Color.primary)
             .padding(.horizontal, .oneAndHalf)
     }
-    
+        
     private var transactionList: some View {
-        ScrollView {
-            LazyVStack(alignment: .leading, spacing: .half) {
-                ForEach(0...10, id: \.self) { _ in
-                    TransactionCard(
-                        category: .education,
-                        title: "Item",
-                        subtitle: "Subtitle",
-                        value: 10,
-                        currency: .brazilianReal)
-                }
+        List {
+            ForEach(0...10, id: \.self) { _ in
+                TransactionCard(
+                    category: .education,
+                    title: "Item",
+                    subtitle: "Subtitle",
+                    value: 10,
+                    currency: .brazilianReal)
             }
+            .listRowSeparator(.hidden)
+            .listRowInsets(EdgeInsets(
+                top: .half,
+                bottom: .half))
             .padding(.horizontal, .oneAndHalf)
         }
+        .verticalEdgesFading(amount: .half)
+        .listStyle(.plain)
     }
 }
 
