@@ -32,6 +32,7 @@ struct TransactionsSection: View {
                     value: 10,
                     currency: .brazilianReal)
             }
+            .listRowBackground(Color.clear)
             .listRowSeparator(.hidden)
             .listRowInsets(EdgeInsets(
                 top: .half,
