@@ -9,62 +9,70 @@ struct CardSection: View {
     private let cardWidth: CGFloat = 326
     private let cardHeight: CGFloat = 160
     
+    private var cardBottomPadding: CGFloat {
+        max(middleCardOffsetY, backCardOffsetY)
+    }
+    
+    private let middleCardScaleMultiplier: CGFloat = 0.85
+    private let middleCardOffsetY: CGFloat = 10
+    
+    private let backCardScaleMultiplier: CGFloat = 0.7
+    private let backCardOffsetY: CGFloat = 20
+    
     // MARK: Body
     
     var body: some View {
-        // QUESTION: This approach works, but the final frame is still the front card. I'd like it to
-        // incorporate the offsetted views as well.
-        ZStack {
+        ZStack(alignment: .bottom) {
             backCard
             middleCard
             frontCard
         }
-        .padding(.horizontal, .oneAndHalf)
+        .padding(.bottom, cardBottomPadding)
     }
     
     // MARK: Auxiliary Views
     
     private var frontCard: some View {
-        ZStack(alignment: .topLeading) {
-            Color.primary
-                .frame(width: cardWidth, height: cardHeight)
-                .background(Color.primary)
-                .cornerRadius(.oneAndQuarter)
-                .overlay(alignment: .topLeading) {
-                    HStack(alignment: .top) {
-                        Text("$521,985.00")
-                            .textStyle(.h1)
-                            .foregroundStyle(Color.white)
-                            .padding(.oneAndHalf)
-                        
-                        Spacer()
-                        
-                        RoundButton(
-                            icon: .ellipsis,
-                            iconColor: .white,
-                            backgroundColor: .clear) {
-                                print("...")
-                            }
-                            .padding(.threeQuarters)
-                    }
+        Color.primary
+            .frame(width: cardWidth, height: cardHeight)
+            .background(Color.primary)
+            .cornerRadius(.oneAndQuarter)
+            .overlay(alignment: .topLeading) {
+                HStack(alignment: .top) {
+                    Text("$521,985.00")
+                        .textStyle(.h1)
+                        .foregroundStyle(Color.white)
+                        .padding(.oneAndHalf)
+                    
+                    Spacer()
+                    
+                    RoundButton(
+                        icon: .ellipsis,
+                        iconColor: .white,
+                        backgroundColor: .clear) {
+                            print("...")
+                        }
+                        .padding(.threeQuarters)
                 }
-        }
+            }
     }
     
     private var middleCard: some View {
         Color.lightGray
-            .frame(width: cardWidth, height: cardHeight)
+            .frame(
+                width: cardWidth * middleCardScaleMultiplier,
+                height: cardHeight * middleCardScaleMultiplier)
             .cornerRadius(.oneAndQuarter)
-            .scaleEffect(0.85)
-            .offset(y: 20)
+            .offset(y: middleCardOffsetY)
     }
     
     private var backCard: some View {
         Color.lighterGray
-            .frame(width: cardWidth, height: cardHeight)
+            .frame(
+                width: cardWidth * backCardScaleMultiplier,
+                height: cardHeight * backCardScaleMultiplier)
             .cornerRadius(.oneAndQuarter)
-            .scaleEffect(0.7)
-            .offset(y: 40)
+            .offset(y: backCardOffsetY)
     }
 }
 
