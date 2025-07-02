@@ -38,6 +38,8 @@
 		C26C3D3A2DCC2B74008A4212 /* TabState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C3D392DCC2B72008A4212 /* TabState.swift */; };
 		C26C3D3C2DCC2DF0008A4212 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26C3D3B2DCC2DED008A4212 /* AppTabView.swift */; };
 		C26F644B2D654CBD0003366A /* ArcMoneyCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F644A2D654CBD0003366A /* ArcMoneyCategory.swift */; };
+		C27D440B2E14D5B7007C8822 /* EdgeInsets+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D440A2E14D5B2007C8822 /* EdgeInsets+Extensions.swift */; };
+		C27D440D2E14DCF2007C8822 /* View+FadingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27D440C2E14DCF0007C8822 /* View+FadingEffect.swift */; };
 		C27F64652CCFEB3A00F75606 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27F64642CCFEB3A00F75606 /* IconView.swift */; };
 		C29F103D2DDE85D300650F52 /* AppSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F103C2DDE85CE00650F52 /* AppSettingsManager.swift */; };
 		C29F103F2DDE8BB700650F52 /* UserDefaultsAppSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29F103E2DDE8BB600650F52 /* UserDefaultsAppSettingsManager.swift */; };
@@ -87,6 +89,8 @@
 		C26C3D392DCC2B72008A4212 /* TabState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabState.swift; sourceTree = "<group>"; };
 		C26C3D3B2DCC2DED008A4212 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
 		C26F644A2D654CBD0003366A /* ArcMoneyCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcMoneyCategory.swift; sourceTree = "<group>"; };
+		C27D440A2E14D5B2007C8822 /* EdgeInsets+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EdgeInsets+Extensions.swift"; sourceTree = "<group>"; };
+		C27D440C2E14DCF0007C8822 /* View+FadingEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+FadingEffect.swift"; sourceTree = "<group>"; };
 		C27F64642CCFEB3A00F75606 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		C29F103C2DDE85CE00650F52 /* AppSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsManager.swift; sourceTree = "<group>"; };
 		C29F103E2DDE8BB600650F52 /* UserDefaultsAppSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsAppSettingsManager.swift; sourceTree = "<group>"; };
@@ -304,10 +308,12 @@
 		C2E02AE02CF577D0005F8AB6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C27D440A2E14D5B2007C8822 /* EdgeInsets+Extensions.swift */,
 				C201FAEB2D2F21BA00592551 /* HStack+Extensions.swift */,
 				C29F60E92D4D7A2100DE31B9 /* View+BindSizeChange.swift */,
 				C21037AB2D701FE3001CEEBC /* View+DisableScrollBounce.swift */,
 				C2E02AE12CF57812005F8AB6 /* View+Extensions.swift */,
+				C27D440C2E14DCF0007C8822 /* View+FadingEffect.swift */,
 				C21037A92D70158F001CEEBC /* View+SelectAllTextOnBeginEditing.swift */,
 				C21037A72D700DF2001CEEBC /* View+UnfocusOnTap.swift */,
 				C201FAED2D2F222A00592551 /* VStack+Extensions.swift */,
@@ -401,6 +407,7 @@
 				C29F60EA2D4D7A2B00DE31B9 /* View+BindSizeChange.swift in Sources */,
 				C2E6A1282D386C690084E39F /* DropdownRowView.swift in Sources */,
 				C2E02AE22CF57816005F8AB6 /* View+Extensions.swift in Sources */,
+				C27D440D2E14DCF2007C8822 /* View+FadingEffect.swift in Sources */,
 				C226B58E2CD275E900F4BA44 /* ArcMoneyIcon.swift in Sources */,
 				C29F10432DDE9F8300650F52 /* UserDefaultsAppSettingsManagerChatGPT.swift in Sources */,
 				C2E6A4392D41BF980084E39F /* DropdownData.swift in Sources */,
@@ -430,6 +437,7 @@
 				C2E02AE42CF57A5F005F8AB6 /* ArcMoneyCornerRadius.swift in Sources */,
 				C2E02ADD2CF57516005F8AB6 /* ArcMoneySpacing.swift in Sources */,
 				C25D7F852D5D0471005B87CB /* Currency.swift in Sources */,
+				C27D440B2E14D5B7007C8822 /* EdgeInsets+Extensions.swift in Sources */,
 				C24960C02E05F74300DD56DF /* CardSection.swift in Sources */,
 				C24960C22E05F75B00DD56DF /* TransactionsSection.swift in Sources */,
 				C26C3D382DCC2B23008A4212 /* TabPresentable.swift in Sources */,
