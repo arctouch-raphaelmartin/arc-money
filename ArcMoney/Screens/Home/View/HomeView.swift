@@ -52,7 +52,7 @@ extension HomeView: TabPresentable {
         Label("Home", systemImage: "house")
     }
     
-    var tabIdentifier: TabIdentifier {
+    static var tabIdentifier: TabIdentifier {
         .home
     }
 }

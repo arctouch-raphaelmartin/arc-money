@@ -21,7 +21,7 @@ extension StatisticsView: TabPresentable {
         Label("Statistics", systemImage: "chart.xyaxis.line")
     }
     
-    var tabIdentifier: TabIdentifier {
+    static var tabIdentifier: TabIdentifier {
         .statistics
     }
 }

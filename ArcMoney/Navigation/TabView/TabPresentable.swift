@@ -2,7 +2,7 @@ import SwiftUI
 
 // MARK: - TabPresentable
 
-protocol TabPresentable {
+protocol TabPresentable: View {
     
     // MARK: Associated Types
     
@@ -11,7 +11,7 @@ protocol TabPresentable {
     // MARK: Internal Properties
     
     var tabItem: TabLabel { get }
-    var tabIdentifier: TabIdentifier { get }
+    static var tabIdentifier: TabIdentifier { get }
     
 }
 
@@ -25,6 +25,6 @@ extension View where Self: TabPresentable {
         self.tabItem {
             self.tabItem
         }
-        .tag(self.tabIdentifier)
+        .tag(Self.tabIdentifier)
     }
 }
